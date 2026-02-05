@@ -1,6 +1,7 @@
 import { useInView } from 'react-intersection-observer';
 import { Button } from './ui/button';
-import { Rocket, TrendingUp, Users, Zap } from 'lucide-react';
+import { Crown, Shield, Zap, Target, Building } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const FrimatTech = () => {
   const { ref, inView } = useInView({
@@ -10,69 +11,116 @@ const FrimatTech = () => {
 
   const features = [
     {
-      icon: <Rocket className="w-6 h-6" />,
-      title: 'Innovation First',
-      description: 'Cutting-edge solutions that push boundaries',
+      icon: <Shield className="w-6 h-6" />,
+      title: 'Sovereign Security',
+      description: 'Infrastructure built for absolute data sovereignty',
     },
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: 'Growth Focused',
-      description: 'Empowering businesses to scale effectively',
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: 'Client-Centric',
-      description: 'Your success is our priority',
+      icon: <Target className="w-6 h-6" />,
+      title: 'Strategic Precision',
+      description: 'Every solution architected with intent',
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: 'Fast & Reliable',
-      description: 'Efficient delivery without compromise',
+      title: 'Scalable Power',
+      description: 'Systems designed to grow with your ambition',
+    },
+    {
+      icon: <Building className="w-6 h-6" />,
+      title: 'Legacy Engineering',
+      description: 'Built to withstand, adapt, and lead',
     },
   ];
 
   return (
-    <section id="frimat" className="py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-background relative overflow-hidden" ref={ref}>
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+    <section id="frimat" className="py-20 bg-card relative overflow-hidden" ref={ref}>
+      {/* Background decorations */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent"></div>
+      
+      <div className="absolute top-20 right-10 w-64 h-64 border border-secondary/10 rotate-45"></div>
+      <div className="absolute bottom-20 left-10 w-48 h-48 border border-secondary/10 -rotate-12"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className={`text-center mb-16 ${inView ? 'animate-fade-in-up' : 'opacity-0'}`}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            My Venture: <span className="text-primary">FRIMAT TECHNOLOGIES</span>
-          </h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center gap-2 mb-4">
+            <Crown className="w-6 h-6 text-secondary" />
+            <span className="text-secondary font-mono text-sm tracking-[0.3em] uppercase">The Venture</span>
+            <Crown className="w-6 h-6 text-secondary" />
+          </div>
           
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            FRIMAT TECHNOLOGIES is a forward-thinking tech company dedicated to 
-            <span className="text-secondary font-semibold"> delivering cutting-edge software solutions and IT services to empower businesses in Kenya and beyond</span>.
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            FRIMAT <span className="text-gradient-gold">TECHNOLOGIES</span>
+          </h2>
+          <div className="w-20 h-0.5 bg-secondary mx-auto mb-8"></div>
+          
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-sans">
+            Providing <span className="text-secondary font-semibold">Sovereign-Grade ICT Architecture</span>—where 
+            every system is built not only to perform but to withstand, adapt, and lead. 
+            For leaders who see technology as a throne, not a tool.
           </p>
-        </div>
+        </motion.div>
 
-        <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 ${inView ? 'animate-scale-in' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
+        >
           {features.map((feature, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-card p-6 rounded-xl border border-border hover:border-primary transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+              className="bg-muted/50 p-6 border border-border hover:border-secondary/50 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10"
             >
-              <div className="inline-flex p-3 rounded-lg bg-primary/10 text-primary mb-4">
+              <div className="inline-flex p-3 bg-secondary/10 text-secondary mb-4">
                 {feature.icon}
               </div>
-              <h3 className="text-lg font-bold mb-2 text-foreground">{feature.title}</h3>
-              <p className="text-sm text-muted-foreground">{feature.description}</p>
-            </div>
+              <h3 className="text-lg font-bold mb-2 text-foreground font-serif">{feature.title}</h3>
+              <p className="text-sm text-muted-foreground font-sans">{feature.description}</p>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        <div className={`text-center ${inView ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
-          <p className="text-lg text-muted-foreground mb-6">
-            Follow our journey and see what we're building
+        {/* Elevator Pitch */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="max-w-4xl mx-auto text-center mb-12"
+        >
+          <div className="bg-background/50 p-8 border border-secondary/30 relative">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 bg-card">
+              <span className="text-secondary font-mono text-xs tracking-widest uppercase">The Vision</span>
+            </div>
+            <p className="text-lg text-muted-foreground italic font-sans leading-relaxed">
+              "I don't just build systems—I architect digital sovereignty. I design ICT ecosystems where 
+              security is inherent, scalability is effortless, and technology serves not just to function, 
+              but to elevate. I am Fredrick Kitonyi, and I turn complex challenges into sovereign solutions."
+            </p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="text-center"
+        >
+          <p className="text-muted-foreground mb-6 font-sans">
+            Follow our journey and witness sovereign innovation
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               size="lg"
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold transform transition-all hover:scale-105"
+              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold transform transition-all hover:scale-105 sovereign-glow"
               onClick={() => window.open('https://www.tiktok.com/@frimattechnologies1', '_blank')}
             >
               <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
@@ -83,16 +131,16 @@ const FrimatTech = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold transform transition-all hover:scale-105"
+              className="border-secondary/50 text-foreground hover:bg-secondary hover:text-secondary-foreground font-semibold transform transition-all hover:scale-105"
               onClick={() => window.open('https://www.linkedin.com/company/frimat-technologies', '_blank')}
             >
               <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
               </svg>
-              LinkedIn
+              Connect on LinkedIn
             </Button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

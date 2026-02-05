@@ -1,5 +1,6 @@
 import { useInView } from 'react-intersection-observer';
-import { GraduationCap, School } from 'lucide-react';
+import { GraduationCap, School, Crown, Target } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const About = () => {
   const { ref, inView } = useInView({
@@ -36,66 +37,118 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-card" ref={ref}>
+    <section id="about" className="py-20 bg-card relative overflow-hidden" ref={ref}>
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-32 h-32 border-l-2 border-t-2 border-secondary/20"></div>
+      <div className="absolute bottom-0 right-0 w-32 h-32 border-r-2 border-b-2 border-secondary/20"></div>
+
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">
-          My Journey
-        </h2>
-        <div className="w-20 h-1 bg-primary mx-auto mb-12"></div>
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <span className="text-secondary font-mono text-sm tracking-[0.3em] uppercase">About</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground mt-2">
+            My Journey
+          </h2>
+          <div className="w-20 h-0.5 bg-secondary mx-auto"></div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Story Section */}
-          <div className={`space-y-6 ${inView ? 'animate-slide-in-left' : 'opacity-0'}`}>
-            <div className="prose prose-invert max-w-none">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            className="space-y-6"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <Crown className="w-6 h-6 text-secondary" />
+              <h3 className="text-2xl font-bold text-foreground font-serif">The Architect's Path</h3>
+            </div>
+
+            <div className="space-y-4 font-sans">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I am a passionate and dedicated technology student currently honing my skills in 
-                <span className="text-primary font-semibold"> Software Engineering & ICT at Zetech University, Nairobi</span>, 
+                I am a passionate and dedicated technology strategist currently advancing my expertise in 
+                <span className="text-secondary font-semibold"> Software Engineering & ICT at Zetech University, Nairobi</span>, 
                 complemented by a Diploma in ICS from ICS Technical College.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 My foundation was built at Katelembo Centre of Excellence and Machakos Primary School, 
-                instilling in me a discipline for excellence.
+                instilling in me a discipline for excellence and an unwavering commitment to mastery.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 I am channeling this knowledge into real-world impact as the 
                 <span className="text-secondary font-semibold"> Founder and CEO of FRIMAT TECHNOLOGIES</span>, 
-                where we strive to innovate and solve pressing challenges through technology.
+                where we architect sovereign digital solutions that don't just function—they elevate.
               </p>
             </div>
-          </div>
+
+            {/* Brand Mantras */}
+            <div className="pt-6 border-t border-border">
+              <div className="flex items-center gap-3 mb-4">
+                <Target className="w-5 h-5 text-secondary" />
+                <span className="text-sm font-mono text-muted-foreground tracking-wide">BRAND MANTRAS</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {[
+                  "Architect with intent. Secure with intelligence.",
+                  "Technology is not installed—it is orchestrated.",
+                  "From infrastructure to insight.",
+                  "Engineered for legacy, designed for tomorrow."
+                ].map((mantra, index) => (
+                  <div key={index} className="flex items-start gap-2 text-sm text-muted-foreground italic">
+                    <span className="text-secondary mt-1">•</span>
+                    <span>{mantra}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
 
           {/* Timeline Section */}
-          <div className={`space-y-6 ${inView ? 'animate-slide-in-right' : 'opacity-0'}`}>
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-6"
+          >
             <div className="relative">
               {/* Timeline line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary/30"></div>
+              <div className="absolute left-8 top-0 bottom-0 w-px bg-secondary/30"></div>
 
               {education.map((edu, index) => (
-                <div
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={inView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="relative pl-20 pb-8 last:pb-0"
-                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {/* Timeline dot */}
-                  <div className="absolute left-5 top-0 w-6 h-6 rounded-full bg-primary border-4 border-background"></div>
+                  <div className="absolute left-5 top-0 w-6 h-6 bg-secondary flex items-center justify-center">
+                    <div className="w-2 h-2 bg-secondary-foreground"></div>
+                  </div>
 
-                  <div className="bg-muted p-6 rounded-lg hover:bg-muted/80 transition-colors border border-border hover:border-primary">
+                  <div className="bg-muted p-6 border border-border hover:border-secondary/50 transition-colors">
                     <div className="flex items-start gap-3 mb-2">
-                      <div className="text-primary mt-1">{edu.icon}</div>
+                      <div className="text-secondary mt-1">{edu.icon}</div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-foreground">{edu.institution}</h3>
+                        <h3 className="text-xl font-bold text-foreground font-serif">{edu.institution}</h3>
                         {edu.location && (
-                          <p className="text-sm text-muted-foreground">{edu.location}</p>
+                          <p className="text-sm text-muted-foreground font-sans">{edu.location}</p>
                         )}
                       </div>
                     </div>
-                    <p className="text-foreground font-medium">{edu.degree}</p>
-                    <p className="text-sm text-primary font-semibold mt-2">{edu.period}</p>
+                    <p className="text-foreground font-medium font-sans">{edu.degree}</p>
+                    <p className="text-sm text-secondary font-mono mt-2">{edu.period}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

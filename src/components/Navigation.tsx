@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from './ui/button';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X, Sun, Moon, Crown } from 'lucide-react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,29 +37,30 @@ const Navigation = () => {
 
   const navItems = [
     { label: 'Home', id: 'home' },
-    { label: 'About', id: 'about' },
-    { label: 'Skills', id: 'skills' },
-    { label: 'Projects', id: 'projects' },
-    { label: 'Testimonials', id: 'testimonials' },
-    { label: 'Blog', id: 'blog' },
-    { label: 'FRIMAT TECH', id: 'frimat' },
-    { label: 'Contact', id: 'contact' },
+    { label: 'Journey', id: 'about' },
+    { label: 'Arsenal', id: 'skills' },
+    { label: 'Citadels', id: 'projects' },
+    { label: 'Council', id: 'testimonials' },
+    { label: 'Insights', id: 'blog' },
+    { label: 'FRIMAT', id: 'frimat' },
+    { label: 'Connect', id: 'contact' },
   ];
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-card/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        isScrolled ? 'bg-card/95 backdrop-blur-md shadow-lg border-b border-secondary/20' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
+          {/* Logo with Crown */}
           <button
             onClick={() => scrollToSection('home')}
-            className="text-xl md:text-2xl font-bold text-primary hover:text-primary/80 transition-colors"
+            className="flex items-center gap-2 text-xl md:text-2xl font-bold text-foreground hover:text-secondary transition-colors"
           >
-            FK
+            <Crown className="w-5 h-5 text-secondary" />
+            <span className="font-serif">FK</span>
           </button>
 
           {/* Desktop Navigation */}
@@ -68,7 +69,7 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-primary transition-colors font-medium text-sm"
+                className="text-muted-foreground hover:text-secondary transition-colors font-medium text-sm tracking-wide"
               >
                 {item.label}
               </button>
@@ -77,7 +78,7 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
-              className="ml-2"
+              className="ml-2 text-secondary hover:text-secondary"
             >
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </Button>
@@ -89,6 +90,7 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
+              className="text-secondary"
             >
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </Button>
@@ -96,6 +98,7 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-foreground"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </Button>
@@ -104,12 +107,12 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 space-y-4 animate-fade-in-up">
+          <div className="md:hidden py-4 space-y-2 animate-fade-in-up bg-card/95 backdrop-blur-md border-t border-secondary/20">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left py-2 px-4 text-foreground hover:text-primary hover:bg-muted rounded-lg transition-colors font-medium"
+                className="block w-full text-left py-3 px-4 text-muted-foreground hover:text-secondary hover:bg-muted/50 transition-colors font-medium tracking-wide"
               >
                 {item.label}
               </button>
