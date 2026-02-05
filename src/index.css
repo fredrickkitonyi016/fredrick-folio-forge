@@ -2,101 +2,117 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* SOVEREIGN ARCHITECT - Design System
+   Color Palette:
+   - Midnight Blue (#0A1F3E) - Primary, trust, depth, stability
+   - Platinum Silver (#C4C9CF) - Clarity, innovation, precision
+   - Imperial Gold (#D4AF37) - Excellence, value, mastery
+   - Arctic White (#FFFFFF) - Purity, simplicity, focus
 */
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 210 30% 15%;
+    /* Arctic White Theme (Light Mode) */
+    --background: 0 0% 100%;
+    --foreground: 216 48% 14%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 210 30% 15%;
+    --card: 210 20% 98%;
+    --card-foreground: 216 48% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 30% 15%;
+    --popover-foreground: 216 48% 14%;
 
-    --primary: 180 100% 40%;
-    --primary-foreground: 0 0% 98%;
+    /* Midnight Blue Primary */
+    --primary: 216 73% 14%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 25 95% 53%;
-    --secondary-foreground: 0 0% 98%;
+    /* Imperial Gold Secondary */
+    --secondary: 43 70% 52%;
+    --secondary-foreground: 216 48% 14%;
 
-    --muted: 210 20% 95%;
-    --muted-foreground: 210 15% 40%;
+    /* Platinum Silver Muted */
+    --muted: 210 15% 92%;
+    --muted-foreground: 210 15% 45%;
 
-    --accent: 180 100% 40%;
-    --accent-foreground: 0 0% 98%;
+    /* Imperial Gold Accent */
+    --accent: 43 70% 52%;
+    --accent-foreground: 216 48% 14%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 180 100% 40%;
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 43 70% 52%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
     
-    /* Custom portfolio colors */
-    --navy: 210 30% 15%;
-    --light-text: 0 0% 98%;
-    --cyan-accent: 180 100% 40%;
-    --orange-accent: 25 95% 53%;
+    /* Sovereign Theme Custom Colors */
+    --midnight: 216 73% 14%;
+    --platinum: 210 10% 80%;
+    --gold: 43 70% 52%;
+    --arctic: 0 0% 100%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(180 100% 95%) 0%, hsl(190 80% 90%) 50%, hsl(200 70% 85%) 100%);
+    --gradient-sovereign: linear-gradient(135deg, hsl(216 73% 14%) 0%, hsl(216 48% 24%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(43 70% 52%) 0%, hsl(43 80% 62%) 100%);
     
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Shadows */
+    --shadow-sovereign: 0 10px 40px -10px hsl(216 73% 14% / 0.3);
+    --shadow-gold: 0 10px 40px -10px hsl(43 70% 52% / 0.3);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 216 48% 14%;
+    --sidebar-primary: 216 73% 14%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 15% 92%;
+    --sidebar-accent-foreground: 216 48% 14%;
+    --sidebar-border: 210 20% 88%;
+    --sidebar-ring: 43 70% 52%;
   }
 
   .dark {
-    --background: 210 30% 8%;
-    --foreground: 200 20% 92%;
+    /* Midnight Blue Theme (Dark Mode) */
+    --background: 216 73% 8%;
+    --foreground: 210 15% 92%;
 
-    --card: 215 28% 12%;
-    --card-foreground: 200 20% 92%;
+    --card: 216 60% 12%;
+    --card-foreground: 210 15% 92%;
 
-    --popover: 215 28% 12%;
-    --popover-foreground: 200 20% 92%;
+    --popover: 216 60% 12%;
+    --popover-foreground: 210 15% 92%;
 
-    --primary: 180 100% 69%;
-    --primary-foreground: 210 30% 8%;
+    /* Midnight Blue Primary */
+    --primary: 210 15% 92%;
+    --primary-foreground: 216 73% 8%;
 
-    --secondary: 25 95% 53%;
-    --secondary-foreground: 210 30% 8%;
+    /* Imperial Gold Secondary */
+    --secondary: 43 70% 52%;
+    --secondary-foreground: 216 73% 8%;
 
-    --muted: 215 20% 20%;
-    --muted-foreground: 200 15% 65%;
+    /* Platinum Silver Muted */
+    --muted: 216 50% 18%;
+    --muted-foreground: 210 10% 65%;
 
-    --accent: 180 100% 69%;
-    --accent-foreground: 210 30% 8%;
+    /* Imperial Gold Accent */
+    --accent: 43 70% 52%;
+    --accent-foreground: 216 73% 8%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 200 20% 92%;
+    --destructive-foreground: 210 15% 92%;
 
-    --border: 215 20% 20%;
-    --input: 215 20% 20%;
-    --ring: 180 100% 69%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 216 40% 22%;
+    --input: 216 40% 22%;
+    --ring: 43 70% 52%;
+
+    --sidebar-background: 216 73% 8%;
+    --sidebar-foreground: 210 15% 92%;
+    --sidebar-primary: 43 70% 52%;
+    --sidebar-primary-foreground: 216 73% 8%;
+    --sidebar-accent: 216 50% 18%;
+    --sidebar-accent-foreground: 210 15% 92%;
+    --sidebar-border: 216 40% 22%;
+    --sidebar-ring: 43 70% 52%;
   }
 }
 
@@ -107,11 +123,15 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Playfair Display', serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'Source Code Pro', monospace;
   }
 
   html {
@@ -134,6 +154,18 @@ All colors MUST be HSL.
 
   .animate-scale-in {
     animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-secondary via-yellow-400 to-secondary bg-clip-text text-transparent;
+  }
+
+  .border-gradient-gold {
+    border-image: linear-gradient(135deg, hsl(43 70% 52%), hsl(43 80% 62%)) 1;
+  }
+
+  .sovereign-glow {
+    box-shadow: 0 0 40px hsl(43 70% 52% / 0.2);
   }
 }
 
@@ -179,4 +211,22 @@ All colors MUST be HSL.
     opacity: 1;
     transform: scale(1);
   }
+}
+
+/* Custom scrollbar for dark theme */
+.dark::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dark::-webkit-scrollbar-track {
+  background: hsl(216 73% 8%);
+}
+
+.dark::-webkit-scrollbar-thumb {
+  background: hsl(43 70% 52%);
+  border-radius: 4px;
+}
+
+.dark::-webkit-scrollbar-thumb:hover {
+  background: hsl(43 80% 60%);
 }

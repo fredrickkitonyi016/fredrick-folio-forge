@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Calendar, Clock, ArrowRight } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, BookOpen } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 
@@ -12,28 +12,28 @@ const Blog = () => {
 
   const blogPosts = [
     {
-      title: "The Future of Software Engineering in Kenya",
-      excerpt: "Exploring emerging trends in software development and how they're shaping the Kenyan tech landscape...",
+      title: "Building Sovereign-Grade Infrastructure",
+      excerpt: "Exploring the principles of digital sovereignty and how to architect systems that prioritize security, scalability, and independence...",
       date: "2024-03-15",
-      readTime: "5 min read",
-      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop",
-      category: "Technology",
-    },
-    {
-      title: "Building Scalable Web Applications",
-      excerpt: "A comprehensive guide to designing and developing web applications that can grow with your business needs...",
-      date: "2024-03-10",
       readTime: "8 min read",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
-      category: "Development",
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+      category: "Cybersecurity",
     },
     {
-      title: "My Journey in Tech Entrepreneurship",
-      excerpt: "Lessons learned while building FRIMAT TECHNOLOGIES from the ground up and navigating the startup ecosystem...",
-      date: "2024-03-05",
+      title: "The Future of African Tech Innovation",
+      excerpt: "Kenya's position in the global tech landscape and how sovereign ICT architecture can drive continental digital transformation...",
+      date: "2024-03-10",
       readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop",
-      category: "Entrepreneurship",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop",
+      category: "Thought Leadership",
+    },
+    {
+      title: "From Infrastructure to Insight",
+      excerpt: "How strategic ICT architecture transforms raw infrastructure into actionable business intelligence and competitive advantage...",
+      date: "2024-03-05",
+      readTime: "5 min read",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop",
+      category: "Strategy",
     },
   ];
 
@@ -67,11 +67,13 @@ const Blog = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+          <span className="text-secondary font-mono text-sm tracking-[0.3em] uppercase">Architect's Diary</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground mt-2">
             Latest Insights
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Sharing my thoughts on technology, development, and entrepreneurship
+          <div className="w-20 h-0.5 bg-secondary mx-auto mb-6"></div>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-sans">
+            Strategic perspectives on technology, security, and African tech innovation
           </p>
         </motion.div>
 
@@ -84,41 +86,43 @@ const Blog = () => {
         >
           {blogPosts.map((post, index) => (
             <motion.div key={index} variants={itemVariants}>
-              <Card className="overflow-hidden h-full hover:shadow-xl transition-all duration-300 border-border bg-card group">
+              <Card className="overflow-hidden h-full hover:shadow-xl hover:shadow-secondary/10 transition-all duration-300 border-border bg-card group">
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={post.image}
                     alt={post.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-60" />
                   <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 text-xs font-medium bg-primary text-primary-foreground rounded-full">
+                    <span className="px-3 py-1 text-xs font-mono bg-secondary text-secondary-foreground">
                       {post.category}
                     </span>
                   </div>
                 </div>
                 <CardHeader>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-2">
+                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-2 font-mono">
                     <div className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
+                      <Calendar className="w-4 h-4 text-secondary" />
                       <span>{new Date(post.date).toLocaleDateString()}</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
+                      <Clock className="w-4 h-4 text-secondary" />
                       <span>{post.readTime}</span>
                     </div>
                   </div>
-                  <CardTitle className="text-foreground group-hover:text-primary transition-colors">
+                  <CardTitle className="text-foreground group-hover:text-secondary transition-colors font-serif">
                     {post.title}
                   </CardTitle>
-                  <CardDescription className="text-muted-foreground">
+                  <CardDescription className="text-muted-foreground font-sans">
                     {post.excerpt}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Button variant="ghost" className="group/btn p-0 h-auto hover:bg-transparent">
-                    <span className="text-primary font-medium">Read More</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    <BookOpen className="w-4 h-4 mr-2 text-secondary" />
+                    <span className="text-secondary font-medium">Read More</span>
+                    <ArrowRight className="w-4 h-4 ml-2 text-secondary group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
                 </CardContent>
               </Card>

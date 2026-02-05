@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Quote } from 'lucide-react';
+import { Quote, Crown } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
 
 const Testimonials = () => {
@@ -11,22 +11,22 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "CEO, TechStart Inc.",
-      content: "Fredrick delivered an exceptional e-commerce solution that exceeded our expectations. His attention to detail and technical expertise made our collaboration seamless.",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
-    },
-    {
-      name: "Michael Chen",
-      role: "Project Manager, Digital Solutions",
-      content: "Working with Fredrick was a game-changer. His innovative approach and dedication to delivering quality work on time made him an invaluable asset to our team.",
+      name: "James Mwangi",
+      role: "CTO, KenTech Solutions",
+      content: "Fredrick architected a security infrastructure that transformed our entire digital operations. His sovereign approach to cybersecurity gave us complete confidence in our data protection.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
     },
     {
-      name: "Emily Rodriguez",
-      role: "Founder, StartupHub",
-      content: "Fredrick's ability to understand complex requirements and translate them into elegant solutions is remarkable. FRIMAT TECHNOLOGIES has been instrumental in our digital transformation.",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop",
+      name: "Grace Wanjiku",
+      role: "Director, Digital Africa Initiative",
+      content: "Working with the Sovereign ICT Architect was a game-changer. His ability to design scalable cloud kingdoms while maintaining bulletproof security is unmatched in the industry.",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
+    },
+    {
+      name: "David Ochieng",
+      role: "CEO, Nairobi FinTech Hub",
+      content: "FRIMAT TECHNOLOGIES delivered a sovereign-grade solution that exceeded our expectations. Fredrick's precision in every protocol and excellence in execution speaks volumes about his craft.",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
     },
   ];
 
@@ -60,11 +60,13 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Client Testimonials
+          <span className="text-secondary font-mono text-sm tracking-[0.3em] uppercase">Testimonials</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground mt-2">
+            Council of Clients
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            What people say about working with me and FRIMAT TECHNOLOGIES
+          <div className="w-20 h-0.5 bg-secondary mx-auto mb-6"></div>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-sans">
+            What leaders say about partnering with the Sovereign ICT Architect
           </p>
         </motion.div>
 
@@ -77,21 +79,27 @@ const Testimonials = () => {
         >
           {testimonials.map((testimonial, index) => (
             <motion.div key={index} variants={itemVariants}>
-              <Card className="h-full border-border bg-card hover:shadow-xl transition-shadow duration-300">
-                <CardContent className="pt-6">
-                  <Quote className="w-10 h-10 text-primary mb-4" />
-                  <p className="text-foreground mb-6 leading-relaxed">
+              <Card className="h-full border-border bg-card hover:shadow-xl hover:shadow-secondary/10 transition-all duration-300 relative overflow-hidden">
+                {/* Decorative corner */}
+                <div className="absolute top-0 right-0 w-16 h-16 bg-secondary/10"></div>
+                <div className="absolute top-2 right-2">
+                  <Crown className="w-4 h-4 text-secondary" />
+                </div>
+                
+                <CardContent className="pt-8">
+                  <Quote className="w-10 h-10 text-secondary/50 mb-4" />
+                  <p className="text-foreground mb-6 leading-relaxed font-sans italic">
                     "{testimonial.content}"
                   </p>
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-4 border-t border-border pt-4">
                     <img
                       src={testimonial.image}
                       alt={testimonial.name}
-                      className="w-12 h-12 rounded-full object-cover border-2 border-primary"
+                      className="w-12 h-12 object-cover border-2 border-secondary"
                     />
                     <div>
-                      <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
-                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                      <h4 className="font-semibold text-foreground font-serif">{testimonial.name}</h4>
+                      <p className="text-sm text-muted-foreground font-sans">{testimonial.role}</p>
                     </div>
                   </div>
                 </CardContent>

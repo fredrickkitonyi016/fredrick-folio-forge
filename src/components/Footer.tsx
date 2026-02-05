@@ -1,17 +1,33 @@
+import { Crown, Shield } from 'lucide-react';
+
 const Footer = () => {
   return (
-    <footer className="bg-card border-t border-border py-8">
+    <footer className="bg-card border-t border-border py-12">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-muted-foreground text-center md:text-left">
-            © {new Date().getFullYear()} Fredrick Kitonyi Kiio. All rights reserved.
+        <div className="flex flex-col items-center gap-6">
+          {/* Logo */}
+          <div className="flex items-center gap-2">
+            <Crown className="w-6 h-6 text-secondary" />
+            <span className="text-2xl font-bold font-serif text-foreground">FK</span>
+          </div>
+
+          {/* Tagline */}
+          <p className="text-muted-foreground text-center font-sans">
+            Architecting Digital Realms • Strategic • Secure • Sovereign
           </p>
+
+          {/* Signature */}
+          <p className="text-sm text-secondary italic font-sans">
+            "Precision in every protocol, excellence in every execution."
+          </p>
+
+          {/* Social Links */}
           <div className="flex gap-6">
             <a
               href="https://www.tiktok.com/@frimattechnologies1"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-secondary transition-colors"
               aria-label="TikTok"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -22,7 +38,7 @@ const Footer = () => {
               href="https://www.linkedin.com/company/frimat-technologies"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-secondary transition-colors"
               aria-label="LinkedIn"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -31,7 +47,7 @@ const Footer = () => {
             </a>
             <a
               href="mailto:frimattechnologies016@gmail.com"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-secondary transition-colors"
               aria-label="Email"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -39,6 +55,24 @@ const Footer = () => {
               </svg>
             </a>
           </div>
+
+          {/* Divider */}
+          <div className="w-full max-w-xs h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent"></div>
+
+          {/* Copyright */}
+          <div className="flex flex-col md:flex-row items-center gap-2 text-sm text-muted-foreground">
+            <span>© {new Date().getFullYear()} Fredrick Kitonyi Kiio.</span>
+            <span className="hidden md:inline">•</span>
+            <span className="flex items-center gap-1">
+              <Shield className="w-3 h-3 text-secondary" />
+              All rights reserved.
+            </span>
+          </div>
+
+          {/* Closing Statement */}
+          <p className="text-xs text-muted-foreground text-center max-w-lg font-sans">
+            "Thank you for your time. Remember: in a world of digital tenants, be sovereign. Let's build your throne."
+          </p>
         </div>
       </div>
     </footer>
