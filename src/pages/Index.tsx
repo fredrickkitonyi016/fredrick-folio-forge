@@ -8,22 +8,15 @@ import Blog from "@/components/Blog";
 import FrimatTech from "@/components/FrimatTech";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import profileImage from "@/assets/fredrick-profile.jpg";
+import CircuitBackground from "@/components/CircuitBackground";
+import BusinessCard from "@/components/BusinessCard";
+import EmailSignature from "@/components/EmailSignature";
 
 const Index = () => {
   return (
     <div className="min-h-screen relative">
-      {/* Background with profile image */}
-      <div 
-        className="fixed inset-0 z-0 opacity-[0.03] dark:opacity-[0.02]"
-        style={{
-          backgroundImage: `url(${profileImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          filter: 'blur(2px)',
-        }}
-      />
+      {/* Circuit particle background */}
+      <CircuitBackground />
       
       {/* Content overlay */}
       <div className="relative z-10">
@@ -35,6 +28,8 @@ const Index = () => {
         <Testimonials />
         <Blog />
         <FrimatTech />
+        <BusinessCard />
+        <EmailSignature />
         <Contact />
         <Footer />
       </div>

@@ -43,6 +43,7 @@ const Navigation = () => {
     { label: 'Council', id: 'testimonials' },
     { label: 'Insights', id: 'blog' },
     { label: 'FRIMAT', id: 'frimat' },
+    { label: 'Card', id: 'business-card' },
     { label: 'Connect', id: 'contact' },
   ];
 
