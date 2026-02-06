@@ -2,6 +2,7 @@ import { TypeAnimation } from 'react-type-animation';
 import { Button } from './ui/button';
 import { ChevronDown, Shield, Crown } from 'lucide-react';
 import profileImage from '@/assets/fredrick-profile.jpg';
+import heroVideo from '@/assets/hero-video.mp4';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
@@ -12,19 +13,33 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen relative flex items-center justify-center overflow-hidden bg-background">
+      {/* Video Background */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover opacity-20 dark:opacity-15"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background"></div>
+      </div>
+
       {/* Cinematic gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/50"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background/90 to-muted/50 z-[1]"></div>
       
       {/* Animated geometric patterns */}
-      <div className="absolute inset-0 overflow-hidden opacity-10">
+      <div className="absolute inset-0 overflow-hidden opacity-10 z-[2]">
         <div className="absolute top-20 left-10 w-64 h-64 border border-secondary/30 rotate-45 animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 border border-secondary/20 rotate-12"></div>
         <div className="absolute top-1/2 left-1/4 w-32 h-32 border border-secondary/40 rotate-45"></div>
       </div>
 
       {/* Decorative lines */}
-      <div className="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-secondary/30 to-transparent"></div>
-      <div className="absolute right-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-secondary/30 to-transparent"></div>
+      <div className="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-secondary/30 to-transparent z-[2]"></div>
+      <div className="absolute right-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-secondary/30 to-transparent z-[2]"></div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
