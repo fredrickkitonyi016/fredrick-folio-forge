@@ -1,9 +1,10 @@
 import { TypeAnimation } from 'react-type-animation';
 import { Button } from './ui/button';
-import { ChevronDown, Shield, Crown, Download } from 'lucide-react';
+import { ChevronDown, Shield, Crown, FileText } from 'lucide-react';
 import profileImage from '@/assets/fredrick-profile.jpg';
 import heroVideo from '@/assets/hero-video.mp4';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -113,10 +114,10 @@ const Hero = () => {
                 className="border-secondary/50 text-foreground hover:bg-secondary hover:text-secondary-foreground font-semibold transform transition-all hover:scale-105"
                 asChild
               >
-                <a href="/Fredrick_Kitonyi_Resume.pdf" download="Fredrick_Kitonyi_Resume.pdf">
-                  <Download className="w-4 h-4 mr-2" />
-                  Download Resume
-                </a>
+                <Link to="/resume">
+                  <FileText className="w-4 h-4 mr-2" />
+                  View Resume
+                </Link>
               </Button>
             </div>
 
