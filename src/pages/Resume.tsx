@@ -17,9 +17,11 @@ const Resume = () => {
             Back to Portfolio
           </Button>
         </Link>
-        <Button onClick={handlePrint} className="bg-black text-white hover:bg-gray-800">
-          <Download className="w-4 h-4 mr-2" />
-          Download PDF
+        <Button asChild className="bg-black text-white hover:bg-gray-800">
+          <a href="/Fredrick_Kitonyi_Resume.pdf" download="Fredrick_Kitonyi_Resume.pdf">
+            <Download className="w-4 h-4 mr-2" />
+            Download PDF
+          </a>
         </Button>
       </div>
 
