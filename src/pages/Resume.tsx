@@ -10,7 +10,7 @@ const Resume = () => {
   return (
     <div className="min-h-screen bg-white text-black">
       {/* Navigation - hidden when printing */}
-      <div className="print:hidden fixed top-4 left-4 right-4 flex justify-between items-center z-10">
+      <div className="print:hidden fixed top-4 left-4 right-4 flex justify-between items-center z-10 gap-2">
         <Link to="/">
           <Button variant="outline" className="bg-white/90 border-gray-300 text-gray-700 hover:bg-gray-100">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -26,16 +26,16 @@ const Resume = () => {
       </div>
 
       {/* Resume Content - ATS Optimized */}
-      <div className="max-w-[8.5in] mx-auto px-8 py-12 print:py-0 print:px-[0.5in] print:max-w-none">
+      <div className="max-w-[8.5in] mx-auto px-4 sm:px-8 py-12 print:py-0 print:px-[0.5in] print:max-w-none">
         {/* Header */}
         <header className="text-center border-b-2 border-black pb-4 mb-6 mt-12 print:mt-0">
           <h1 className="text-3xl font-bold uppercase tracking-wide mb-2">Fredrick Kitonyi Kiio</h1>
           <p className="text-lg font-semibold mb-2">Software Engineering Student | Full Stack Developer | Tech Innovator</p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 text-xs sm:text-sm">
             <span>Email: frimattechnologies016@gmail.com</span>
-            <span>|</span>
+            <span className="hidden sm:inline">|</span>
             <span>Phone: +254 112 277 289</span>
-            <span>|</span>
+            <span className="hidden sm:inline">|</span>
             <span>Location: Nairobi, Kenya</span>
           </div>
         </header>
@@ -54,35 +54,35 @@ const Resume = () => {
           <h2 className="text-lg font-bold uppercase border-b border-black mb-2">Education</h2>
           
           <div className="mb-4">
-            <div className="flex justify-between items-start">
-              <h3 className="font-bold">Diploma in Software Engineering - Zetech University, Nairobi Campus</h3>
-              <span className="text-sm">2023 - 2025 (Expected)</span>
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+              <h3 className="font-bold text-sm sm:text-base">Diploma in Software Engineering - Zetech University, Nairobi Campus</h3>
+              <span className="text-xs sm:text-sm text-gray-600 sm:text-black sm:whitespace-nowrap">2023 - 2025 (Expected)</span>
             </div>
             <p className="text-sm italic">Current GPA: 3.9/4.0</p>
             <p className="text-sm mt-1">Relevant Coursework: Object-Oriented Programming, Web Development (React, Node.js, PHP), Database Systems, Data Structures & Algorithms, Mobile App Development, Cloud Computing & DevOps, AI & Machine Learning, Cybersecurity, Agile Methodologies</p>
           </div>
 
           <div className="mb-4">
-            <div className="flex justify-between items-start">
-              <h3 className="font-bold">Diploma in ICT - ICS Technical College, Nairobi</h3>
-              <span className="text-sm">2022 - 2023</span>
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+              <h3 className="font-bold text-sm sm:text-base">Diploma in ICT - ICS Technical College, Nairobi</h3>
+              <span className="text-xs sm:text-sm text-gray-600 sm:text-black sm:whitespace-nowrap">2022 - 2023</span>
             </div>
             <p className="text-sm italic">GPA: 3.8/4.0</p>
             <p className="text-sm mt-1">Relevant Coursework: Computer Fundamentals, Programming (Java, Python), Web Development, Database Design & SQL, Networking, System Administration</p>
           </div>
 
           <div className="mb-4">
-            <div className="flex justify-between items-start">
-              <h3 className="font-bold">KCSE - Katelembo Centre of Excellence Boys High School</h3>
-              <span className="text-sm">2015 - 2018</span>
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+              <h3 className="font-bold text-sm sm:text-base">KCSE - Katelembo Centre of Excellence Boys High School</h3>
+              <span className="text-xs sm:text-sm text-gray-600 sm:text-black sm:whitespace-nowrap">2015 - 2018</span>
             </div>
             <p className="text-sm">Focus: Mathematics, Computer Studies, Physics</p>
           </div>
 
           <div>
-            <div className="flex justify-between items-start">
-              <h3 className="font-bold">KCPE - Machakos Primary School</h3>
-              <span className="text-sm">2007 - 2014</span>
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+              <h3 className="font-bold text-sm sm:text-base">KCPE - Machakos Primary School</h3>
+              <span className="text-xs sm:text-sm text-gray-600 sm:text-black sm:whitespace-nowrap">2007 - 2014</span>
             </div>
           </div>
         </section>
@@ -92,9 +92,9 @@ const Resume = () => {
           <h2 className="text-lg font-bold uppercase border-b border-black mb-2">Professional Experience</h2>
           
           <div className="mb-4">
-            <div className="flex justify-between items-start">
-              <h3 className="font-bold">Freelance Web Developer - Self-Employed</h3>
-              <span className="text-sm">2023 - Present</span>
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+              <h3 className="font-bold text-sm sm:text-base">Freelance Web Developer - Self-Employed</h3>
+              <span className="text-xs sm:text-sm text-gray-600 sm:text-black sm:whitespace-nowrap">2023 - Present</span>
             </div>
             <ul className="text-sm list-disc ml-5 mt-1">
               <li>Developed 15+ responsive websites for local businesses using React, JavaScript, and CSS frameworks</li>
@@ -104,9 +104,9 @@ const Resume = () => {
           </div>
 
           <div className="mb-4">
-            <div className="flex justify-between items-start">
-              <h3 className="font-bold">Software Development Intern - Zetech University Innovation Hub</h3>
-              <span className="text-sm">2024 (4 months)</span>
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+              <h3 className="font-bold text-sm sm:text-base">Software Development Intern - Zetech University Innovation Hub</h3>
+              <span className="text-xs sm:text-sm text-gray-600 sm:text-black sm:whitespace-nowrap">2024 (4 months)</span>
             </div>
             <ul className="text-sm list-disc ml-5 mt-1">
               <li>Developed student portal enhancement features using React and Node.js</li>
@@ -117,9 +117,9 @@ const Resume = () => {
           </div>
 
           <div>
-            <div className="flex justify-between items-start">
-              <h3 className="font-bold">Cyber Cafe Assistant - Community Cyber Cafe</h3>
-              <span className="text-sm">2023 - 2024</span>
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+              <h3 className="font-bold text-sm sm:text-base">Cyber Cafe Assistant - Community Cyber Cafe</h3>
+              <span className="text-xs sm:text-sm text-gray-600 sm:text-black sm:whitespace-nowrap">2023 - 2024</span>
             </div>
             <ul className="text-sm list-disc ml-5 mt-1">
               <li>Assisted 50+ customers daily with digital services and computer usage</li>
