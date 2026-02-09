@@ -100,10 +100,10 @@ const FrimatTech = () => {
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 bg-card">
               <span className="text-secondary font-mono text-xs tracking-widest uppercase">The Vision</span>
             </div>
-            <p className="text-lg text-muted-foreground italic font-sans leading-relaxed">
-              "I don't just build systems—I architect digital sovereignty. I design ICT ecosystems where 
-              security is inherent, scalability is effortless, and technology serves not just to function, 
-              but to elevate. I am Fredrick Kitonyi, and I turn complex challenges into sovereign solutions."
+             <p className="text-lg text-muted-foreground italic font-sans leading-relaxed">
+              "I architect digital sovereignty for visionary enterprises. By implementing the proprietary 
+              Kitonyi Sovereign Stack, I transform your technology from a cost center into a crown jewel—autonomous, 
+              secure, and perpetually authoritative. Your infrastructure shouldn't just work; it should reign."
             </p>
           </div>
         </motion.div>

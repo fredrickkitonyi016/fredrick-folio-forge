@@ -11,6 +11,8 @@ import Footer from "@/components/Footer";
 import CircuitBackground from "@/components/CircuitBackground";
 import BusinessCard from "@/components/BusinessCard";
 import EmailSignature from "@/components/EmailSignature";
+import SovereignDossier from "@/components/SovereignDossier";
+import SignatureTalks from "@/components/SignatureTalks";
 
 const Index = () => {
   return (
@@ -27,6 +29,8 @@ const Index = () => {
         <Projects />
         <Testimonials />
         <Blog />
+        <SovereignDossier />
+        <SignatureTalks />
         <FrimatTech />
         <BusinessCard />
         <EmailSignature />
