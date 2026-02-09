@@ -42,6 +42,8 @@ const Navigation = () => {
     { label: 'Citadels', id: 'projects' },
     { label: 'Council', id: 'testimonials' },
     { label: 'Insights', id: 'blog' },
+    { label: 'Dossier', id: 'dossier' },
+    { label: 'Talks', id: 'talks' },
     { label: 'FRIMAT', id: 'frimat' },
     { label: 'Card', id: 'business-card' },
     { label: 'Connect', id: 'contact' },

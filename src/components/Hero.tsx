@@ -67,6 +67,8 @@ const Hero = () => {
                 sequence={[
                   'Sovereign ICT Architect',
                   2000,
+                  'Creator of the Kitonyi Sovereign Stack',
+                  2000,
                   'Cybersecurity Strategist',
                   2000,
                   'Cloud Infrastructure Expert',
@@ -82,8 +84,10 @@ const Hero = () => {
             </div>
 
             <p className="text-lg text-muted-foreground max-w-xl font-sans leading-relaxed">
-              I don't just build systems—I architect digital sovereignty. Where security is inherent, 
-              scalability is effortless, and technology serves not just to function, but to elevate.
+              I architect digital sovereignty for visionary enterprises. By implementing the proprietary 
+              <span className="text-secondary font-semibold">Kitonyi Sovereign Stack</span>, I transform your 
+              technology from a cost center into a crown jewel—autonomous, secure, and perpetually authoritative. 
+              Your infrastructure shouldn't just work; it should <span className="italic">reign</span>.
             </p>
 
             {/* Signature line */}
