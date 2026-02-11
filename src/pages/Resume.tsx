@@ -44,7 +44,7 @@ const Resume = () => {
         <section className="mb-6">
           <h2 className="text-lg font-bold uppercase border-b border-black mb-2">Objective</h2>
           <p className="text-sm leading-relaxed">
-            Passionate ICT student at Zetech University with strong foundation from ICT Diploma at ICS Technical College. 
+            Passionate Software Engineering student pursuing a Bachelor's Degree at Zetech University with strong foundation from a Diploma in ICT at ICS Technical College. 
             Committed to building innovative solutions and contributing to cutting-edge software projects with expertise in full-stack development and emerging technologies.
           </p>
         </section>
@@ -55,7 +55,7 @@ const Resume = () => {
           
           <div className="mb-4">
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
-              <h3 className="font-bold text-sm sm:text-base">Diploma in ICT - Zetech University, Nairobi Campus</h3>
+              <h3 className="font-bold text-sm sm:text-base">Bachelor's Degree in Software Engineering - Zetech University, Nairobi Campus</h3>
               <span className="text-xs sm:text-sm text-gray-600 sm:text-black sm:whitespace-nowrap">2023 - 2026 (Expected)</span>
             </div>
             <p className="text-sm italic">Current GPA: 3.9/4.0</p>
