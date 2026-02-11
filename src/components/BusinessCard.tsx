@@ -22,7 +22,7 @@ ORG:FRIMAT TECHNOLOGIES
 TITLE:Sovereign ICT Architect
 TEL;TYPE=WORK,VOICE:+254112277289
 EMAIL:frimattechnologies016@gmail.com
-URL:https://id-preview--5231c1bf-ba6c-4ffb-a689-82fc8b3d07b4.lovable.app
+URL:https://fredrickkitonyi.com
 NOTE:Precision in every protocol, excellence in every execution.
 END:VCARD`;
 
