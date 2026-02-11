@@ -12,13 +12,13 @@ const About = () => {
     {
       institution: 'Zetech University',
       location: 'Nairobi Branch',
-      degree: 'Diploma in ICT',
+      degree: 'Bachelor\'s Degree in Software Engineering',
       period: '2023 - Present',
       icon: <GraduationCap className="w-6 h-6" />,
     },
     {
       institution: 'ICS Technical College',
-      degree: 'Diploma in ICS',
+      degree: 'Diploma in ICT',
       period: '2022 - Present',
       icon: <GraduationCap className="w-6 h-6" />,
     },
@@ -71,9 +71,9 @@ const About = () => {
 
             <div className="space-y-4 font-sans">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I am a passionate and dedicated technology strategist currently advancing my expertise in 
-                <span className="text-secondary font-semibold"> ICT at Zetech University, Nairobi</span>, 
-                complemented by a Diploma in ICS from ICS Technical College.
+                I am a passionate and dedicated technology strategist currently pursuing my 
+                <span className="text-secondary font-semibold"> Bachelor's Degree in Software Engineering at Zetech University, Nairobi</span>, 
+                complemented by a Diploma in ICT from ICS Technical College.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 My foundation was built at Katelembo Centre of Excellence and Machakos Primary School, 
