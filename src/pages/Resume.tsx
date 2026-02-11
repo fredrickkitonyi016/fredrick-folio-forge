@@ -56,7 +56,7 @@ const Resume = () => {
           <div className="mb-4">
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
               <h3 className="font-bold text-sm sm:text-base">Bachelor's Degree in Software Engineering - Zetech University, Nairobi Campus</h3>
-              <span className="text-xs sm:text-sm text-gray-600 sm:text-black sm:whitespace-nowrap">2023 - 2026 (Expected)</span>
+              <span className="text-xs sm:text-sm text-gray-600 sm:text-black sm:whitespace-nowrap">2024 - Present</span>
             </div>
             <p className="text-sm italic">Current GPA: 3.9/4.0</p>
             <p className="text-sm mt-1">Relevant Coursework: Object-Oriented Programming, Web Development (React, Node.js, PHP), Database Systems, Data Structures & Algorithms, Mobile App Development, Cloud Computing & DevOps, AI & Machine Learning, Cybersecurity, Agile Methodologies</p>

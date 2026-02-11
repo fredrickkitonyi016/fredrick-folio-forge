@@ -13,13 +13,13 @@ const About = () => {
       institution: 'Zetech University',
       location: 'Nairobi Branch',
       degree: 'Bachelor\'s Degree in Software Engineering',
-      period: '2023 - Present',
+      period: '2024 - Present',
       icon: <GraduationCap className="w-6 h-6" />,
     },
     {
       institution: 'ICS Technical College',
       degree: 'Diploma in ICT',
-      period: '2022 - Present',
+      period: '2022 - 2023',
       icon: <GraduationCap className="w-6 h-6" />,
     },
     {
