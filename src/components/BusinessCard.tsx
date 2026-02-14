@@ -1,9 +1,10 @@
 import { useRef } from 'react';
 import { Button } from './ui/button';
-import { Download, Crown, Shield, Mail, Phone, Linkedin, Globe } from 'lucide-react';
+import { Download, Crown, Shield, Mail, Phone, Linkedin, Globe, Image } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import html2canvas from 'html2canvas';
 
 const BusinessCard = () => {
   const { toast } = useToast();
@@ -42,6 +43,34 @@ END:VCARD`;
     });
   };
 
+  const downloadAsImage = async () => {
+    if (!cardRef.current) return;
+    try {
+      const canvas = await html2canvas(cardRef.current, {
+        backgroundColor: null,
+        scale: 2,
+        useCORS: true,
+      });
+      const link = document.createElement('a');
+      link.href = canvas.toDataURL('image/jpeg', 0.95);
+      link.download = 'Fredrick_Kitonyi_BusinessCard.jpg';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      toast({
+        title: "Business card image downloaded!",
+        description: "The JPG has been saved to your device.",
+      });
+    } catch {
+      toast({
+        title: "Download failed",
+        description: "Could not generate the image. Please try again.",
+        variant: "destructive",
+      });
+    }
+  };
+
   return (
     <section id="business-card" className="py-20 bg-muted/30 relative overflow-hidden" ref={ref}>
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent"></div>
@@ -70,10 +99,10 @@ END:VCARD`;
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="grid md:grid-cols-2 gap-8"
+            ref={cardRef}
           >
             {/* Front of Card */}
             <div 
-              ref={cardRef}
               className="relative aspect-[1.75/1] bg-gradient-to-br from-primary to-primary/90 p-8 flex flex-col justify-between border border-secondary/30 shadow-2xl"
               style={{ minHeight: '280px' }}
             >
@@ -180,12 +209,12 @@ END:VCARD`;
             </div>
           </motion.div>
 
-          {/* Download Button */}
+          {/* Download Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-center mt-8"
+            className="text-center mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <Button
               size="lg"
@@ -195,10 +224,19 @@ END:VCARD`;
               <Download className="w-4 h-4 mr-2" />
               Download Contact Card
             </Button>
-            <p className="text-sm text-muted-foreground mt-4 font-sans">
-              Saves as vCard (.vcf) - compatible with all devices
-            </p>
+            <Button
+              size="lg"
+              onClick={downloadAsImage}
+              variant="outline"
+              className="border-secondary/50 text-secondary hover:bg-secondary/10 font-semibold transform transition-all hover:scale-105"
+            >
+              <Image className="w-4 h-4 mr-2" />
+              Download as JPG
+            </Button>
           </motion.div>
+          <p className="text-sm text-muted-foreground mt-4 font-sans text-center">
+            vCard (.vcf) for contacts • JPG for sharing
+          </p>
         </div>
       </div>
     </section>
