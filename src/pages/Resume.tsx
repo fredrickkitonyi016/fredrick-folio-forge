@@ -220,8 +220,19 @@ const Resume = () => {
             margin: 0.5in;
           }
           body {
-            -webkit-print-color-adjust: exact;
-            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
+          }
+          * {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
+          h2 {
+            border-bottom: 1px solid black !important;
+          }
+          header {
+            border-bottom: 2px solid black !important;
           }
         }
       `}</style>
