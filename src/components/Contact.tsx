@@ -193,19 +193,37 @@ const Contact = () => {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6 bg-card p-8 border border-border">
+            <form onSubmit={handleSubmit} noValidate className="space-y-6 bg-card p-8 border border-border">
               <div className="text-center mb-6">
                 <p className="text-secondary font-mono text-sm tracking-wide">SECURE CHANNEL</p>
               </div>
-              
+
+              {submitted && (
+                <div
+                  role="status"
+                  aria-live="polite"
+                  className="flex items-start gap-3 border border-secondary/40 bg-secondary/10 p-4"
+                >
+                  <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-foreground font-sans">Message sent successfully</p>
+                    <p className="text-sm text-muted-foreground font-sans">
+                      WhatsApp opened in a new tab — press send there to complete delivery.
+                    </p>
+                  </div>
+                </div>
+              )}
+
               <div>
                 <Input
                   placeholder="Your Name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  required
+                  maxLength={100}
+                  aria-invalid={!!errors.name}
                   className="bg-background border-border focus:border-secondary transition-colors font-sans"
                 />
+                {errors.name && <p className="text-xs text-destructive mt-1 font-sans">{errors.name}</p>}
               </div>
               <div>
                 <Input
@@ -213,19 +231,30 @@ const Contact = () => {
                   placeholder="Your Email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  required
+                  maxLength={255}
+                  aria-invalid={!!errors.email}
                   className="bg-background border-border focus:border-secondary transition-colors font-sans"
                 />
+                {errors.email && <p className="text-xs text-destructive mt-1 font-sans">{errors.email}</p>}
               </div>
               <div>
                 <Textarea
                   placeholder="Your Message"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  required
                   rows={6}
+                  maxLength={1000}
+                  aria-invalid={!!errors.message}
                   className="bg-background border-border focus:border-secondary transition-colors resize-none font-sans"
                 />
+                <div className="flex justify-between mt-1">
+                  {errors.message ? (
+                    <p className="text-xs text-destructive font-sans">{errors.message}</p>
+                  ) : (
+                    <span />
+                  )}
+                  <p className="text-xs text-muted-foreground font-mono">{formData.message.length}/1000</p>
+                </div>
               </div>
               <Button
                 type="submit"
