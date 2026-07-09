@@ -219,7 +219,9 @@ const Resume = () => {
             size: letter;
             margin: 0.5in;
           }
-          body {
+          html, body {
+            background: #ffffff !important;
+            color: #000000 !important;
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
             color-adjust: exact !important;
@@ -227,12 +229,32 @@ const Resume = () => {
           * {
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
+            color-adjust: exact !important;
+          }
+          /* Keep section headings glued to their content */
+          section {
+            break-inside: avoid;
+            page-break-inside: avoid;
+          }
+          h1, h2, h3 {
+            break-after: avoid;
+            page-break-after: avoid;
+            break-inside: avoid;
+            page-break-inside: avoid;
+          }
+          /* Prevent orphaned rows inside sections */
+          ul, li, p {
+            break-inside: avoid;
+            page-break-inside: avoid;
           }
           h2 {
-            border-bottom: 1px solid black !important;
+            border-bottom: 1px solid #000 !important;
           }
           header {
-            border-bottom: 2px solid black !important;
+            border-bottom: 2px solid #000 !important;
+          }
+          .print\\:hidden {
+            display: none !important;
           }
         }
       `}</style>
