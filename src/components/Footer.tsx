@@ -24,7 +24,7 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex gap-6">
             <a
-              href="https://www.tiktok.com/@frimattechnologies1"
+              href="https://www.tiktok.com/@frimattechnologies016"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-secondary transition-colors"
