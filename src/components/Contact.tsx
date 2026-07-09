@@ -2,10 +2,29 @@ import { useInView } from 'react-intersection-observer';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
-import { Mail, MessageSquare, Linkedin, Phone, Crown, Shield } from 'lucide-react';
+import { Mail, MessageSquare, Linkedin, Phone, Crown, Shield, CheckCircle2 } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { motion } from 'framer-motion';
+import { z } from 'zod';
+
+const contactSchema = z.object({
+  name: z
+    .string()
+    .trim()
+    .min(2, { message: 'Name must be at least 2 characters' })
+    .max(100, { message: 'Name must be less than 100 characters' }),
+  email: z
+    .string()
+    .trim()
+    .email({ message: 'Please enter a valid email address' })
+    .max(255, { message: 'Email must be less than 255 characters' }),
+  message: z
+    .string()
+    .trim()
+    .min(10, { message: 'Message must be at least 10 characters' })
+    .max(1000, { message: 'Message must be less than 1000 characters' }),
+});
 
 const Contact = () => {
   const { ref, inView } = useInView({
@@ -19,21 +38,45 @@ const Contact = () => {
     email: '',
     message: '',
   });
+  const [errors, setErrors] = useState<{ name?: string; email?: string; message?: string }>({});
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    const whatsappMessage = `Hello! I'm ${formData.name}%0A%0AEmail: ${formData.email}%0A%0AMessage: ${formData.message}`;
+
+    const result = contactSchema.safeParse(formData);
+    if (!result.success) {
+      const fieldErrors: typeof errors = {};
+      for (const issue of result.error.issues) {
+        const key = issue.path[0] as keyof typeof errors;
+        if (key && !fieldErrors[key]) fieldErrors[key] = issue.message;
+      }
+      setErrors(fieldErrors);
+      toast({
+        title: 'Please review the form',
+        description: 'Some fields need your attention.',
+        variant: 'destructive',
+      });
+      return;
+    }
+
+    setErrors({});
+    const { name, email, message } = result.data;
+    const whatsappMessage = encodeURIComponent(
+      `Hello! I'm ${name}\n\nEmail: ${email}\n\nMessage: ${message}`,
+    );
     const whatsappUrl = `https://wa.me/254112277289?text=${whatsappMessage}`;
-    
-    window.open(whatsappUrl, '_blank');
-    
+
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+
     toast({
-      title: "Opening secure channel...",
-      description: "Your message will be sent via WhatsApp.",
+      title: 'Message sent successfully!',
+      description: 'Your message has opened in WhatsApp — hit send to complete delivery.',
     });
-    
+
+    setSubmitted(true);
     setFormData({ name: '', email: '', message: '' });
+    setTimeout(() => setSubmitted(false), 6000);
   };
 
   const contactInfo = [
@@ -58,8 +101,8 @@ const Contact = () => {
     {
       icon: <MessageSquare className="w-5 h-5" />,
       label: 'TikTok',
-      value: '@frimattechnologies1',
-      link: 'https://www.tiktok.com/@frimattechnologies1',
+      value: '@frimattechnologies016',
+      link: 'https://www.tiktok.com/@frimattechnologies016',
     },
   ];
 
