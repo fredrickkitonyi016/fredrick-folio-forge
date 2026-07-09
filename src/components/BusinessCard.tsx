@@ -47,26 +47,42 @@ END:VCARD`;
     if (!cardRef.current) return;
     try {
       const canvas = await html2canvas(cardRef.current, {
-        backgroundColor: null,
-        scale: 2,
+        backgroundColor: '#ffffff',
+        scale: window.devicePixelRatio > 1 ? 3 : 2,
         useCORS: true,
+        logging: false,
+        windowWidth: cardRef.current.scrollWidth,
+        windowHeight: cardRef.current.scrollHeight,
       });
-      const link = document.createElement('a');
-      link.href = canvas.toDataURL('image/jpeg', 0.95);
-      link.download = 'Fredrick_Kitonyi_BusinessCard.jpg';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
 
-      toast({
-        title: "Business card image downloaded!",
-        description: "The JPG has been saved to your device.",
-      });
+      const filename = 'Fredrick_Kitonyi_BusinessCard.jpg';
+
+      canvas.toBlob(
+        (blob) => {
+          if (!blob) throw new Error('Blob generation failed');
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = filename;
+          link.rel = 'noopener';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          setTimeout(() => URL.revokeObjectURL(url), 1500);
+
+          toast({
+            title: 'Business card image downloaded!',
+            description: 'The JPG has been saved to your device.',
+          });
+        },
+        'image/jpeg',
+        0.95,
+      );
     } catch {
       toast({
-        title: "Download failed",
-        description: "Could not generate the image. Please try again.",
-        variant: "destructive",
+        title: 'Download failed',
+        description: 'Could not generate the image. Please try again.',
+        variant: 'destructive',
       });
     }
   };
