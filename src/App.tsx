@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useCallback } from "react";
 import Index from "./pages/Index";
 import Resume from "./pages/Resume";
+import ResumeEverlyne from "./pages/ResumeEverlyne";
 import NotFound from "./pages/NotFound";
 import SplashScreen from "./components/SplashScreen";
 
@@ -29,6 +30,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/resume" element={<Resume />} />
+              <Route path="/resume/everlyne" element={<ResumeEverlyne />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
