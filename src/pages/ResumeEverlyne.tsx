@@ -128,9 +128,77 @@ const ResumeEverlyne = () => {
           <div className="text-sm space-y-1">
             <p><strong>Animation:</strong> Adobe Animate, Autodesk Maya, Blender, Toon Boom Harmony, After Effects</p>
             <p><strong>Graphics Design:</strong> Adobe Photoshop, Illustrator, InDesign, CorelDRAW, Canva, Figma</p>
-            <p><strong>Video &amp; Motion:</strong> Adobe Premiere Pro, After Effects, DaVinci Resolve</p>
-            <p><strong>Core Skills:</strong> Storyboarding, Character Design, Motion Graphics, Branding, Typography, Color Theory, VFX, UI/UX Basics</p>
+            <p><strong>Video &amp; Motion:</strong> Adobe Premiere Pro, After Effects, DaVinci Resolve, Final Cut Pro</p>
+            <p><strong>Core Disciplines:</strong> Storyboarding, Character Design, Rigging, Motion Graphics, Branding, Typography, Color Theory, VFX, UI/UX Basics</p>
             <p><strong>Office Tools:</strong> MS Word, MS Excel, MS PowerPoint, Google Workspace</p>
+          </div>
+        </section>
+
+        {/* Soft Skills */}
+        <section className="mb-6">
+          <h2 className="text-lg font-bold uppercase border-b border-black mb-2">Soft Skills</h2>
+          <div className="text-sm grid grid-cols-1 sm:grid-cols-2 gap-x-8">
+            <ul className="list-disc ml-5">
+              <li>Creative problem solving &amp; visual thinking</li>
+              <li>Effective client communication &amp; briefing</li>
+              <li>Time management &amp; meeting deadlines</li>
+            </ul>
+            <ul className="list-disc ml-5">
+              <li>Teamwork &amp; production collaboration</li>
+              <li>Attention to detail &amp; quality control</li>
+              <li>Adaptability &amp; continuous learning</li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Key Projects */}
+        <section className="mb-6">
+          <h2 className="text-lg font-bold uppercase border-b border-black mb-2">Key Projects</h2>
+
+          <div className="mb-2">
+            <h3 className="font-bold inline">2D Animated Short Film</h3>
+            <span className="text-sm"> — Wrote, storyboarded, and animated a short film exploring cultural storytelling; produced in Adobe Animate with After Effects compositing.</span>
+          </div>
+
+          <div className="mb-2">
+            <h3 className="font-bold inline">Brand Identity System for SME</h3>
+            <span className="text-sm"> — Delivered logo, color system, typography guide, business cards, and social templates in Adobe Illustrator and Photoshop.</span>
+          </div>
+
+          <div className="mb-2">
+            <h3 className="font-bold inline">Explainer Motion Graphics Video</h3>
+            <span className="text-sm"> — Designed and animated a 60-second explainer using After Effects, including voice-over sync, kinetic typography, and iconography.</span>
+          </div>
+
+          <div>
+            <h3 className="font-bold inline">3D Character Model &amp; Rig</h3>
+            <span className="text-sm"> — Modeled, textured, and rigged a stylized 3D character in Blender for animation coursework.</span>
+          </div>
+        </section>
+
+        {/* Achievements & Certifications */}
+        <section className="mb-6">
+          <h2 className="text-lg font-bold uppercase border-b border-black mb-2">Achievements &amp; Certifications</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 text-sm">
+            <div>
+              <p className="font-semibold mb-1">Achievements:</p>
+              <ul className="list-disc ml-5">
+                <li>Recognized for Best Student Animation Project at KIMC</li>
+                <li>Featured designer in KIMC creative showcase exhibitions</li>
+                <li>Successfully delivered 20+ freelance design briefs to full client satisfaction</li>
+                <li>Head of Sound Instruments, YCS — Vyulya Girls High School (2019 – 2021)</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-semibold mb-1">Certifications:</p>
+              <ul className="list-disc ml-5">
+                <li>Diploma in Animation &amp; Graphics Design — KIMC</li>
+                <li>Certificate in Computer Packages — Kenya Institute of Management</li>
+                <li>Adobe Creative Suite Proficiency (Photoshop, Illustrator, After Effects)</li>
+                <li>Introduction to Blender 3D — Online Certification</li>
+                <li>Digital Marketing &amp; Social Media Design — Online Certification</li>
+              </ul>
+            </div>
           </div>
         </section>
 
