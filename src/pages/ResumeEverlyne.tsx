@@ -265,6 +265,9 @@ const ResumeEverlyne = () => {
       <style>{`
         @media print {
           @page { size: letter; margin: 0.5in; }
+          html, body, * {
+            font-family: "Times New Roman", Times, serif !important;
+          }
           html, body {
             background: #ffffff !important;
             color: #000000 !important;
