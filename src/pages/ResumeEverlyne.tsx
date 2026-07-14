@@ -8,7 +8,7 @@ const ResumeEverlyne = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-white text-black" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
       {/* Navigation - hidden when printing */}
       <div className="print:hidden fixed top-4 left-4 right-4 flex justify-between items-center z-10 gap-2">
         <Link to="/resume">
@@ -265,6 +265,9 @@ const ResumeEverlyne = () => {
       <style>{`
         @media print {
           @page { size: letter; margin: 0.5in; }
+          html, body, * {
+            font-family: "Times New Roman", Times, serif !important;
+          }
           html, body {
             background: #ffffff !important;
             color: #000000 !important;
