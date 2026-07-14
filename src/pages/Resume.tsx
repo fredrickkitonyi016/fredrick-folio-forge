@@ -17,10 +17,17 @@ const Resume = () => {
             Back to Portfolio
           </Button>
         </Link>
-        <Button onClick={handlePrint} className="bg-black text-white hover:bg-gray-800">
-          <Download className="w-4 h-4 mr-2" />
-          Download PDF
-        </Button>
+        <div className="flex gap-2">
+          <Link to="/resume/everlyne">
+            <Button variant="outline" className="bg-white/90 border-gray-300 text-gray-700 hover:bg-gray-100">
+              Everlyne's Resume
+            </Button>
+          </Link>
+          <Button onClick={handlePrint} className="bg-black text-white hover:bg-gray-800">
+            <Download className="w-4 h-4 mr-2" />
+            Download PDF
+          </Button>
+        </div>
       </div>
 
       {/* Resume Content - ATS Optimized */}
