@@ -24,7 +24,7 @@ const ResumeEverlyne = () => {
       </div>
 
       {/* Resume Content - ATS Optimized */}
-      <div className="max-w-[8.5in] mx-auto px-4 sm:px-8 py-12 print:py-0 print:px-[0.5in] print:max-w-none">
+      <div className="word-doc max-w-[8.5in] mx-auto px-4 sm:px-[1in] py-12 print:py-0 print:px-[1in] print:max-w-none">
         {/* Header */}
         <header className="text-center border-b-2 border-black pb-4 mb-6 mt-12 print:mt-0">
           <h1 className="text-3xl font-bold uppercase tracking-wide mb-2">Everlyne Musembi</h1>
