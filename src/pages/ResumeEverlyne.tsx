@@ -8,7 +8,7 @@ const ResumeEverlyne = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-white text-black" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
       {/* Navigation - hidden when printing */}
       <div className="print:hidden fixed top-4 left-4 right-4 flex justify-between items-center z-10 gap-2">
         <Link to="/resume">
