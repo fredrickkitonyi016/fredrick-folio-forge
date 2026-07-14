@@ -263,8 +263,35 @@ const ResumeEverlyne = () => {
 
       {/* Print-specific styles */}
       <style>{`
+        /* Microsoft Word-like typography (Times New Roman, 12pt, 1.15 spacing) */
+        .word-doc, .word-doc * {
+          font-family: "Times New Roman", Times, serif !important;
+        }
+        .word-doc {
+          font-size: 12pt;
+          line-height: 1.15;
+          color: #000;
+        }
+        .word-doc p,
+        .word-doc li,
+        .word-doc span,
+        .word-doc div {
+          font-size: 12pt;
+          line-height: 1.15;
+        }
+        /* Word default: 8pt space after paragraphs */
+        .word-doc p { margin: 0 0 8pt 0; }
+        .word-doc ul { margin: 0 0 8pt 0; padding-left: 0.35in; }
+        .word-doc li { margin: 0 0 4pt 0; }
+        /* Word heading styles */
+        .word-doc h1 { font-size: 20pt; font-weight: bold; margin: 0 0 6pt 0; line-height: 1.15; }
+        .word-doc h2 { font-size: 13pt; font-weight: bold; margin: 12pt 0 4pt 0; line-height: 1.15; padding-bottom: 2pt; }
+        .word-doc h3 { font-size: 12pt; font-weight: bold; margin: 6pt 0 2pt 0; line-height: 1.15; }
+        .word-doc header { margin-bottom: 12pt; }
+        .word-doc section { margin-bottom: 10pt; }
+
         @media print {
-          @page { size: letter; margin: 0.5in; }
+          @page { size: letter; margin: 1in; }
           html, body, * {
             font-family: "Times New Roman", Times, serif !important;
           }
@@ -278,6 +305,10 @@ const ResumeEverlyne = () => {
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
           }
+          .word-doc { font-size: 12pt; line-height: 1.15; }
+          .word-doc h1 { font-size: 20pt; }
+          .word-doc h2 { font-size: 13pt; }
+          .word-doc h3 { font-size: 12pt; }
           section { break-inside: avoid; page-break-inside: avoid; }
           h1, h2, h3 {
             break-after: avoid; page-break-after: avoid;
