@@ -81,7 +81,7 @@ const LeadCaptureDialog = ({
       `Request: ${requestType}\n\nName: ${data.name}\nEmail: ${data.email}\nOrganization: ${data.organization || 'N/A'}\nRole: ${data.role || 'N/A'}\n\n${data.message || ''}`
     );
     window.open(
-      `mailto:fredrickkitonyi016@gmail.com?subject=${encodeURIComponent(requestType)}&body=${body}`,
+      `mailto:frimattechnologies016@gmail.com?subject=${encodeURIComponent(requestType)}&body=${body}`,
       '_self'
     );
 
