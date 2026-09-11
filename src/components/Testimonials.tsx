@@ -105,14 +105,40 @@ const Testimonials = () => {
                 </div>
                 
                 <CardContent className="pt-8">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="w-11 h-11 shrink-0 border-2 border-secondary bg-secondary/10 flex items-center justify-center">
+                      <span className="font-serif font-bold text-secondary text-sm tracking-wider">
+                        {testimonial.companyInitials}
+                      </span>
+                    </div>
+                    <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground">
+                      {testimonial.company}
+                    </span>
+                  </div>
+
                   <Quote className="w-10 h-10 text-secondary/50 mb-4" />
                   <p className="text-foreground mb-6 leading-relaxed font-sans italic">
                     "{testimonial.content}"
                   </p>
+
+                  <div className="grid grid-cols-2 gap-3 mb-6">
+                    {testimonial.metrics.map((metric, i) => (
+                      <div key={i} className="border border-secondary/30 bg-muted/40 p-3">
+                        <p className="text-lg font-bold text-secondary font-serif leading-none">
+                          {metric.value}
+                        </p>
+                        <p className="text-[11px] text-muted-foreground font-sans mt-1.5 leading-snug">
+                          {metric.label}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+
                   <div className="flex items-center gap-4 border-t border-border pt-4">
                     <img
                       src={testimonial.image}
-                      alt={testimonial.name}
+                      alt={`${testimonial.name}, ${testimonial.role}`}
+                      loading="lazy"
                       className="w-12 h-12 object-cover border-2 border-secondary"
                     />
                     <div>
