@@ -84,7 +84,7 @@ const Hero = () => {
             </div>
 
             <p className="text-lg text-muted-foreground max-w-xl font-sans leading-relaxed">
-              I architect digital sovereignty for visionary enterprises. By implementing the proprietary 
+              I architect digital sovereignty for visionary enterprises. By implementing the proprietary{' '}
               <span className="text-secondary font-semibold">Kitonyi Sovereign Stack</span>, I transform your 
               technology from a cost center into a crown jewel—autonomous, secure, and perpetually authoritative. 
               Your infrastructure shouldn't just work; it should <span className="italic">reign</span>.

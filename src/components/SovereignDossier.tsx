@@ -118,17 +118,21 @@ const SovereignDossier = () => {
                   </div>
                 ))}
               </div>
-              <Button
-                variant="outline"
-                className="mt-6 border-secondary/50 text-foreground hover:bg-secondary hover:text-secondary-foreground font-semibold group-hover:border-secondary transition-all"
-                onClick={() => {
-                  const el = document.getElementById('contact');
-                  el?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                {item.cta}
-                <ExternalLink className="w-3.5 h-3.5 ml-2" />
-              </Button>
+              <LeadCaptureDialog
+                title={item.cta}
+                description={item.formDescription}
+                requestType={`${item.cta} — ${item.title}`}
+                submitLabel={item.cta}
+                trigger={
+                  <Button
+                    variant="outline"
+                    className="mt-6 border-secondary/50 text-foreground hover:bg-secondary hover:text-secondary-foreground font-semibold group-hover:border-secondary transition-all"
+                  >
+                    {item.cta}
+                    <ExternalLink className="w-3.5 h-3.5 ml-2" />
+                  </Button>
+                }
+              />
             </motion.div>
           ))}
         </div>
