@@ -13,20 +13,38 @@ const Testimonials = () => {
     {
       name: "James Mwangi",
       role: "CTO, KenTech Solutions",
+      company: "KenTech Solutions",
+      companyInitials: "KT",
       content: "Fredrick architected a security infrastructure that transformed our entire digital operations. His sovereign approach to cybersecurity gave us complete confidence in our data protection.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
+      metrics: [
+        { value: "15+", label: "Critical zero-day vulnerabilities remediated" },
+        { value: "12 min", label: "Mean time to detect, down from 9 hours" },
+      ],
     },
     {
       name: "Grace Wanjiku",
       role: "Director, Digital Africa Initiative",
+      company: "Digital Africa Initiative",
+      companyInitials: "DA",
       content: "Working with the Sovereign ICT Architect was a game-changer. His ability to design scalable cloud kingdoms while maintaining bulletproof security is unmatched in the industry.",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
+      metrics: [
+        { value: "40%", label: "Reduction in deployment downtime" },
+        { value: "27%", label: "Lower monthly cloud spend" },
+      ],
     },
     {
       name: "David Ochieng",
       role: "CEO, Nairobi FinTech Hub",
+      company: "Nairobi FinTech Hub",
+      companyInitials: "NF",
       content: "FRIMAT TECHNOLOGIES delivered a sovereign-grade solution that exceeded our expectations. Fredrick's precision in every protocol and excellence in execution speaks volumes about his craft.",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+      metrics: [
+        { value: "99.98%", label: "Platform availability sustained" },
+        { value: "2 days → 5 min", label: "Compliance report generation" },
+      ],
     },
   ];
 
