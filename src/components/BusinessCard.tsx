@@ -24,6 +24,7 @@ TITLE:Sovereign ICT Architect
 TEL;TYPE=WORK,VOICE:+254112277289
 EMAIL:frimattechnologies016@gmail.com
 URL:https://fredrickkitonyi.com
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/company/frimat-technologies
 NOTE:Precision in every protocol, excellence in every execution.
 END:VCARD`;
 
