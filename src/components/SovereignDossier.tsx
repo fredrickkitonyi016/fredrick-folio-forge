@@ -2,6 +2,7 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { Crown, BookOpen, Users, ScrollText, ExternalLink } from 'lucide-react';
 import { Button } from './ui/button';
+import LeadCaptureDialog from './LeadCaptureDialog';
 
 const SovereignDossier = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -41,6 +42,8 @@ const SovereignDossier = () => {
         'Sovereign AI Infrastructure for East Africa',
       ],
       cta: 'Request the Latest Dossier',
+      formDescription:
+        'Submit your details to receive the latest quarterly strategic briefing directly in your inbox.',
     },
     {
       icon: <Users className="w-7 h-7" />,
@@ -53,6 +56,8 @@ const SovereignDossier = () => {
         'Building Cyber-Resilient Supply Chains',
       ],
       cta: 'Request an Invitation',
+      formDescription:
+        'Apply for a seat at the next invitation-only CTO/CIO roundtable. Spaces are limited to 5–6 leaders per session.',
     },
   ];
 
