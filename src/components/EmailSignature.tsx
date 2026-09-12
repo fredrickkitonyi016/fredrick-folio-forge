@@ -41,7 +41,7 @@ const EmailSignature = () => {
         </tr>
         <tr>
           <td style="font-size: 11px; color: #666; padding-top: 2px;">
-            🔗 LinkedIn: FRIMAT TECHNOLOGIES | 🌐 fredrickkitonyi.com
+            🔗 LinkedIn: <a href="https://www.linkedin.com/company/frimat-technologies" style="color: #0A1F3E; text-decoration: none; font-weight: bold;">FRIMAT TECHNOLOGIES</a> | 🌐 fredrickkitonyi.com
           </td>
         </tr>
         <tr>
@@ -76,7 +76,7 @@ Sovereign ICT Architect
 
 📧 frimattechnologies016@gmail.com
 📱 +254 112 277 289
-🔗 LinkedIn: FRIMAT TECHNOLOGIES
+🔗 LinkedIn: https://www.linkedin.com/company/frimat-technologies
 🌐 fredrickkitonyi.com
 
 "Precision in every protocol, excellence in every execution."
