@@ -1,6 +1,6 @@
 import { useInView } from 'react-intersection-observer';
 import { Button } from './ui/button';
-import { Crown, Shield, Zap, Target, Building } from 'lucide-react';
+import { Shield, Zap, Target, Building } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const FrimatTech = () => {
@@ -12,23 +12,23 @@ const FrimatTech = () => {
   const features = [
     {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Sovereign Security',
-      description: 'Infrastructure built for absolute data sovereignty',
+      title: 'Secure Infrastructure',
+      description: 'Infrastructure designed to protect business systems and data',
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: 'Strategic Precision',
-      description: 'Every solution architected with intent',
+      title: 'Practical Planning',
+      description: 'Every solution starts with clear business requirements',
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: 'Scalable Power',
-      description: 'Systems designed to grow with your ambition',
+      title: 'Scalable Systems',
+      description: 'Systems designed to grow with your organization',
     },
     {
       icon: <Building className="w-6 h-6" />,
-      title: 'Legacy Engineering',
-      description: 'Built to withstand, adapt, and lead',
+      title: 'Reliable Delivery',
+      description: 'Technology built to perform, adapt, and last',
     },
   ];
 
@@ -50,7 +50,7 @@ const FrimatTech = () => {
         >
           <div className="inline-flex items-center gap-2 mb-4">
             <Crown className="w-6 h-6 text-secondary" />
-            <span className="text-secondary font-mono text-sm tracking-[0.3em] uppercase">The Venture</span>
+            <span className="text-secondary font-mono text-sm tracking-[0.3em] uppercase">Technology Company</span>
             <Crown className="w-6 h-6 text-secondary" />
           </div>
           
@@ -60,9 +60,7 @@ const FrimatTech = () => {
           <div className="w-20 h-0.5 bg-secondary mx-auto mb-8"></div>
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-sans">
-            Providing <span className="text-secondary font-semibold">Sovereign-Grade ICT Architecture</span>—where 
-            every system is built not only to perform but to withstand, adapt, and lead. 
-            For leaders who see technology as a throne, not a tool.
+            Providing <span className="text-secondary font-semibold">secure, reliable ICT solutions</span> for organizations that need technology to perform, scale, and support their goals.
           </p>
         </motion.div>
 
@@ -98,12 +96,10 @@ const FrimatTech = () => {
         >
           <div className="bg-background/50 p-8 border border-secondary/30 relative">
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 bg-card">
-              <span className="text-secondary font-mono text-xs tracking-widest uppercase">The Vision</span>
+              <span className="text-secondary font-mono text-xs tracking-widest uppercase">Our Focus</span>
             </div>
              <p className="text-lg text-muted-foreground italic font-sans leading-relaxed">
-              "I architect digital sovereignty for visionary enterprises. By implementing the proprietary 
-              Kitonyi Sovereign Stack, I transform your technology from a cost center into a crown jewel—autonomous, 
-              secure, and perpetually authoritative. Your infrastructure shouldn't just work; it should reign."
+              "We plan, build, and improve technology systems that protect data, reduce operational risk, and support sustainable growth."
             </p>
           </div>
         </motion.div>
@@ -115,13 +111,13 @@ const FrimatTech = () => {
           className="text-center"
         >
           <p className="text-muted-foreground mb-6 font-sans">
-            Follow our journey and witness sovereign innovation
+            Follow FRIMAT TECHNOLOGIES for updates and practical technology insights
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               size="lg"
               className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold transform transition-all hover:scale-105 sovereign-glow"
-              onClick={() => window.open('https://www.tiktok.com/@frimattechnologies1', '_blank')}
+              onClick={() => window.open('https://www.tiktok.com/@frimattechnologies016', '_blank')}
             >
               <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>

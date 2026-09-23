@@ -12,8 +12,8 @@ const Blog = () => {
 
   const blogPosts = [
     {
-      title: "Building Sovereign-Grade Infrastructure",
-      excerpt: "Exploring the principles of digital sovereignty and how to architect systems that prioritize security, scalability, and independence...",
+      title: "Building Secure, Reliable Infrastructure",
+      excerpt: "A practical look at systems that prioritize security, scalability, and operational control...",
       date: "2024-03-15",
       readTime: "8 min read",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
@@ -21,7 +21,7 @@ const Blog = () => {
     },
     {
       title: "The Future of African Tech Innovation",
-      excerpt: "Kenya's position in the global tech landscape and how sovereign ICT architecture can drive continental digital transformation...",
+      excerpt: "Kenya's position in the global technology sector and how strong ICT systems can support growth across Africa...",
       date: "2024-03-10",
       readTime: "6 min read",
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop",
@@ -67,13 +67,13 @@ const Blog = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-secondary font-mono text-sm tracking-[0.3em] uppercase">Architect's Diary</span>
+          <span className="text-secondary font-mono text-sm tracking-[0.3em] uppercase">Technology Notes</span>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground mt-2">
-            Latest Insights
+            Articles & Insights
           </h2>
           <div className="w-20 h-0.5 bg-secondary mx-auto mb-6"></div>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-sans">
-            Strategic perspectives on technology, security, and African tech innovation
+            Clear perspectives on technology, security, and innovation in Africa
           </p>
         </motion.div>
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from './ui/button';
-import { Menu, X, Sun, Moon, Crown } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,13 +37,13 @@ const Navigation = () => {
 
   const navItems = [
     { label: 'Home', id: 'home' },
-    { label: 'Journey', id: 'about' },
-    { label: 'KSS', id: 'kss' },
-    { label: 'Arsenal', id: 'skills' },
-    { label: 'Citadels', id: 'projects' },
-    { label: 'Council', id: 'testimonials' },
+    { label: 'About', id: 'about' },
+    { label: 'Approach', id: 'kss' },
+    { label: 'Skills', id: 'skills' },
+    { label: 'Projects', id: 'projects' },
+    { label: 'Feedback', id: 'testimonials' },
     { label: 'Insights', id: 'blog' },
-    { label: 'Dossier', id: 'dossier' },
+    { label: 'Resources', id: 'dossier' },
     { label: 'Talks', id: 'talks' },
     { label: 'FRIMAT', id: 'frimat' },
     { label: 'Card', id: 'business-card' },
@@ -58,13 +58,13 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo with Crown */}
+          {/* Logo */}
           <button
             onClick={() => scrollToSection('home')}
-            className="flex items-center gap-2 text-xl md:text-2xl font-bold text-foreground hover:text-secondary transition-colors"
+            className="flex items-center text-xl md:text-2xl font-bold text-foreground hover:text-secondary transition-colors"
           >
             <Crown className="w-5 h-5 text-secondary" />
-            <span className="font-serif">FK</span>
+            <span>FK<span className="text-secondary">.</span></span>
           </button>
 
           {/* Desktop Navigation */}

@@ -1,4 +1,4 @@
-import { Crown, Shield } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -13,7 +13,7 @@ const Footer = () => {
 
           {/* Tagline */}
           <p className="text-muted-foreground text-center font-sans">
-            Architecting Digital Realms • Strategic • Secure • Sovereign
+            Software • Cybersecurity • Cloud • Network Infrastructure
           </p>
 
           {/* Signature */}
@@ -64,14 +64,14 @@ const Footer = () => {
             <span>© {new Date().getFullYear()} Fredrick Kitonyi Kiio.</span>
             <span className="hidden md:inline">•</span>
             <span className="flex items-center gap-1">
-              <Shield className="w-3 h-3 text-secondary" />
+              <ShieldCheck className="w-3 h-3 text-secondary" />
               All rights reserved.
             </span>
           </div>
 
           {/* Closing Statement */}
           <p className="text-xs text-muted-foreground text-center max-w-lg font-sans">
-            "Thank you for your time. Remember: in a world of digital tenants, be sovereign. Let's build your throne."
+            Thank you for visiting. Get in touch to discuss your next technology project.
           </p>
         </div>
       </div>

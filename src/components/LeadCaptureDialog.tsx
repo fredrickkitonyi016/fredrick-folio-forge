@@ -107,10 +107,9 @@ const LeadCaptureDialog = ({
         {submitted ? (
           <div className="py-8 text-center space-y-4">
             <CheckCircle2 className="w-14 h-14 text-secondary mx-auto" />
-            <h4 className="text-xl font-serif font-bold text-foreground">Request Registered</h4>
+            <h4 className="text-xl font-serif font-bold text-foreground">Request Prepared</h4>
             <p className="text-sm text-muted-foreground font-sans max-w-sm mx-auto">
-              Thank you, {form.name.split(' ')[0]}. Your request has been logged and a confirmation
-              will reach {form.email} shortly.
+              Thank you, {form.name.split(' ')[0]}. Your email app has opened with your request. Please send it to complete your submission. A reply will be sent to {form.email} shortly.
             </p>
             <Button
               variant="outline"

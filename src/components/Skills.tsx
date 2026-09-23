@@ -10,37 +10,37 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: 'The Sovereign Code',
-      subtitle: 'Software & Development',
+      title: 'Software Development',
+      subtitle: 'Applications & Web',
       icon: <Code2 className="w-8 h-8" />,
       skills: ['Java', 'Python', 'TypeScript', 'Web Development', 'Mobile App Development'],
     },
     {
-      title: 'Digital Citadels',
-      subtitle: 'Cybersecurity',
+      title: 'Cybersecurity',
+      subtitle: 'Security & Risk',
       icon: <Shield className="w-8 h-8" />,
       skills: ['Penetration Testing', 'Security Architecture', 'Threat Intelligence', 'Zero Trust Design'],
     },
     {
-      title: 'Network Nebulas',
+      title: 'Network Infrastructure',
       subtitle: 'Infrastructure Design',
       icon: <Network className="w-8 h-8" />,
       skills: ['Network Configuration', 'System Administration', 'Hardware Support', 'Technical Support'],
     },
     {
-      title: 'Cloud Kingdoms',
-      subtitle: 'Cloud & DevOps',
+      title: 'Cloud & DevOps',
+      subtitle: 'Platforms & Automation',
       icon: <Cloud className="w-8 h-8" />,
       skills: ['AWS', 'Azure', 'Kubernetes', 'Docker', 'CI/CD Pipelines'],
     },
     {
-      title: 'Sovereign Strategy',
+      title: 'Business & Leadership',
       subtitle: 'Entrepreneurship',
       icon: <Briefcase className="w-8 h-8" />,
       skills: ['Business Strategy', 'Leadership', 'Project Management', 'Digital Marketing'],
     },
     {
-      title: 'Data Vaults',
+      title: 'Data Protection',
       subtitle: 'Data Protection',
       icon: <Lock className="w-8 h-8" />,
       skills: ['Encryption', 'Compliance', 'GDPR', 'Data Governance'],
@@ -66,11 +66,11 @@ const Skills = () => {
         >
           <span className="text-secondary font-mono text-sm tracking-[0.3em] uppercase">Expertise</span>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground mt-2">
-            My Arsenal
+            Skills & Expertise
           </h2>
           <div className="w-20 h-0.5 bg-secondary mx-auto mb-6"></div>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-sans">
-            Sovereign-grade capabilities engineered for excellence
+            Practical skills across software, security, infrastructure, and business technology
           </p>
         </motion.div>
 

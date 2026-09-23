@@ -1,5 +1,5 @@
 import { useInView } from 'react-intersection-observer';
-import { GraduationCap, School, Crown, Target } from 'lucide-react';
+import { GraduationCap, School, UserRound, Target } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const About = () => {
@@ -51,7 +51,7 @@ const About = () => {
         >
           <span className="text-secondary font-mono text-sm tracking-[0.3em] uppercase">About</span>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground mt-2">
-            My Journey
+            About Me
           </h2>
           <div className="w-20 h-0.5 bg-secondary mx-auto"></div>
         </motion.div>
@@ -65,24 +65,23 @@ const About = () => {
             className="space-y-6"
           >
             <div className="flex items-center gap-3 mb-6">
-              <Crown className="w-6 h-6 text-secondary" />
-              <h3 className="text-2xl font-bold text-foreground font-serif">The Architect's Path</h3>
+              <UserRound className="w-6 h-6 text-secondary" />
+              <h3 className="text-2xl font-bold text-foreground font-serif">Background</h3>
             </div>
 
             <div className="space-y-4 font-sans">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I am a passionate and dedicated technology strategist currently pursuing my 
+                I am a technology professional currently pursuing my 
                 <span className="text-secondary font-semibold"> Bachelor's Degree in Software Engineering at Zetech University, Nairobi</span>, 
                 complemented by a Diploma in ICT from ICS Technical College.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                My foundation was built at Katelembo Centre of Excellence and Machakos Primary School, 
-                instilling in me a discipline for excellence and an unwavering commitment to mastery.
+                I completed my secondary education at Katelembo Centre of Excellence and primary education at Machakos Primary School. These experiences built a strong foundation for continued learning.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I am channeling this knowledge into real-world impact as the 
+                I apply this knowledge through my work as 
                 <span className="text-secondary font-semibold"> Founder and CEO of FRIMAT TECHNOLOGIES</span>, 
-                where we architect sovereign digital solutions that don't just function—they elevate.
+                where we provide practical ICT solutions for businesses and organizations.
               </p>
             </div>
 
@@ -90,14 +89,14 @@ const About = () => {
             <div className="pt-6 border-t border-border">
               <div className="flex items-center gap-3 mb-4">
                 <Target className="w-5 h-5 text-secondary" />
-                <span className="text-sm font-mono text-muted-foreground tracking-wide">BRAND MANTRAS</span>
+                <span className="text-sm font-mono text-muted-foreground tracking-wide">WORK PRINCIPLES</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
-                  "Architect with intent. Secure with intelligence.",
-                  "Technology is not installed—it is orchestrated.",
-                  "From infrastructure to insight.",
-                  "Engineered for legacy, designed for tomorrow."
+                  "Plan carefully. Secure every layer.",
+                  "Technology should support clear business goals.",
+                  "Turn infrastructure into useful insight.",
+                  "Build reliable systems that can grow."
                 ].map((mantra, index) => (
                   <div key={index} className="flex items-start gap-2 text-sm text-muted-foreground italic">
                     <span className="text-secondary mt-1">•</span>
