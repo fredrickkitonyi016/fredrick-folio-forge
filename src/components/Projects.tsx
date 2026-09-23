@@ -38,10 +38,10 @@ const Projects = () => {
   const projects: Project[] = [
     {
       title: "Enterprise Security Gateway",
-      description: "A sovereign-grade cybersecurity infrastructure protecting enterprise data with multi-layered defense protocols.",
+      description: "A layered security design for protecting enterprise systems and data.",
       technologies: ["Python", "Kubernetes", "AWS", "Zero Trust"],
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
-      category: "Digital Citadels",
+      category: "Cybersecurity",
       icon: <Shield className="w-5 h-5" />,
       liveUrl: "https://frimattechnologies.co.ke",
       githubUrl: "https://github.com/fredrickkitonyi",
@@ -66,11 +66,11 @@ const Projects = () => {
       ],
     },
     {
-      title: "Cloud Kingdom Infrastructure",
-      description: "Scalable cloud architecture with automated DevOps pipelines and sovereign data governance.",
+      title: "Cloud Infrastructure Platform",
+      description: "Scalable cloud infrastructure with automated delivery pipelines and clear data controls.",
       technologies: ["Terraform", "Docker", "Azure", "GitOps"],
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop",
-      category: "Cloud Kingdoms",
+      category: "Cloud & DevOps",
       icon: <Server className="w-5 h-5" />,
       liveUrl: "https://frimattechnologies.co.ke",
       githubUrl: "https://github.com/fredrickkitonyi",
@@ -95,11 +95,11 @@ const Projects = () => {
       ],
     },
     {
-      title: "Network Nebula Framework",
-      description: "Advanced network infrastructure design with real-time monitoring and threat intelligence integration.",
+      title: "Network Monitoring Framework",
+      description: "A resilient network design with real-time monitoring and threat detection.",
       technologies: ["Cisco", "Fortinet", "Prometheus", "Grafana"],
       image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop",
-      category: "Network Nebulas",
+      category: "Network Infrastructure",
       icon: <Lock className="w-5 h-5" />,
       liveUrl: "https://frimattechnologies.co.ke",
       githubUrl: "https://github.com/fredrickkitonyi",
@@ -124,11 +124,11 @@ const Projects = () => {
       ],
     },
     {
-      title: "Sovereign Code Platform",
-      description: "Custom software solutions with encrypted data handling and compliance-ready architecture.",
+      title: "Secure Software Platform",
+      description: "Custom software with encrypted data handling and compliance-ready controls.",
       technologies: ["TypeScript", "Node.js", "PostgreSQL", "E2E Encryption"],
       image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop",
-      category: "The Sovereign Code",
+      category: "Software Development",
       icon: <Shield className="w-5 h-5" />,
       liveUrl: "https://frimattechnologies.co.ke",
       githubUrl: "https://github.com/fredrickkitonyi",
@@ -186,11 +186,11 @@ const Projects = () => {
         >
           <span className="text-secondary font-mono text-sm tracking-[0.3em] uppercase">Portfolio</span>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground mt-2">
-            Digital Citadels
+            Selected Projects
           </h2>
           <div className="w-20 h-0.5 bg-secondary mx-auto mb-6"></div>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-sans">
-            Sovereign-grade solutions engineered for legacy, designed for tomorrow
+            Selected work across cybersecurity, cloud, networks, and software
           </p>
         </motion.div>
 
@@ -306,7 +306,7 @@ const Projects = () => {
 
               <div>
                 <h4 className="flex items-center gap-2 text-sm font-mono uppercase tracking-widest text-secondary mb-3">
-                  <CheckCircle2 className="w-4 h-4" /> Measured Outcomes
+                  <CheckCircle2 className="w-4 h-4" /> Project Outcomes
                 </h4>
                 <ul className="space-y-2">
                   {active.outcomes.map((line, i) => (

@@ -2,7 +2,7 @@ import { useInView } from 'react-intersection-observer';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
-import { Mail, MessageSquare, Linkedin, Phone, Crown, Shield, CheckCircle2 } from 'lucide-react';
+import { Mail, MessageSquare, Linkedin, Phone, Send, CheckCircle2 } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { motion } from 'framer-motion';
@@ -124,7 +124,7 @@ const Contact = () => {
           </h2>
           <div className="w-20 h-0.5 bg-secondary mx-auto mb-6"></div>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-sans">
-            Ready to build your digital throne? Let's architect your sovereign solution.
+            Have a project or partnership in mind? Let's discuss a practical technology solution.
           </p>
         </motion.div>
 
@@ -138,12 +138,12 @@ const Contact = () => {
           >
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <Crown className="w-6 h-6 text-secondary" />
+                <MessageSquare className="w-6 h-6 text-secondary" />
                 <h3 className="text-2xl font-bold text-foreground font-serif">Get in Touch</h3>
               </div>
               <p className="text-muted-foreground mb-8 font-sans">
                 I'm always open to discussing strategic partnerships, innovative projects, 
-                or opportunities to architect sovereign digital solutions.
+                or opportunities to build secure and reliable digital solutions.
               </p>
             </div>
 
@@ -175,13 +175,13 @@ const Contact = () => {
               <p className="text-sm text-muted-foreground font-mono mb-4">EMAIL SIGNATURE</p>
               <div className="space-y-1">
                 <p className="font-bold text-foreground font-serif">FREDRICK KITONYI</p>
-                <p className="text-secondary font-sans">Sovereign ICT Architect</p>
+                <p className="text-secondary font-sans">ICT Solutions Professional</p>
                 <p className="text-sm text-muted-foreground italic font-sans mt-2">
                   "Precision in every protocol, excellence in every execution."
                 </p>
                 <p className="text-xs text-muted-foreground flex items-center gap-2 mt-2">
-                  <Shield className="w-3 h-3" />
-                  This email is secured with end-to-end encryption.
+                  <Mail className="w-3 h-3" />
+                  Professional contact details
                 </p>
               </div>
             </div>
@@ -195,7 +195,7 @@ const Contact = () => {
           >
             <form onSubmit={handleSubmit} noValidate className="space-y-6 bg-card p-8 border border-border">
               <div className="text-center mb-6">
-                <p className="text-secondary font-mono text-sm tracking-wide">SECURE CHANNEL</p>
+                <p className="text-secondary font-mono text-sm tracking-wide">SEND A MESSAGE</p>
               </div>
 
               {submitted && (
@@ -261,12 +261,12 @@ const Contact = () => {
                 size="lg"
                 className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold transform transition-all hover:scale-105 sovereign-glow"
               >
-                <Shield className="w-4 h-4 mr-2" />
-                Send Secure Message
+                <Send className="w-4 h-4 mr-2" />
+                Send Message
               </Button>
 
               <p className="text-center text-sm text-muted-foreground italic font-sans">
-                "In a world of digital tenants, be sovereign."
+                I will reply as soon as possible.
               </p>
             </form>
           </motion.div>

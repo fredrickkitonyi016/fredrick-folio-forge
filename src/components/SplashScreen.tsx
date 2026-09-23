@@ -63,7 +63,7 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
             </motion.span>
           </div>
 
-          {/* Gold glow pulse */}
+          {/* Accent pulse */}
           <motion.div
             className="absolute inset-0 border-2 border-secondary/40"
             initial={{ scale: 1, opacity: 0.6 }}
@@ -80,7 +80,7 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
           transition={{ duration: 0.5 }}
         >
           <p className="text-xs md:text-sm font-mono text-secondary tracking-[0.4em] uppercase">
-            Architecting Digital Realms
+            Technology • Security • Cloud
           </p>
         </motion.div>
 

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Quote, Crown } from 'lucide-react';
+import { Quote, Building2 } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
 
 const Testimonials = () => {
@@ -15,7 +15,7 @@ const Testimonials = () => {
       role: "CTO, KenTech Solutions",
       company: "KenTech Solutions",
       companyInitials: "KT",
-      content: "Fredrick architected a security infrastructure that transformed our entire digital operations. His sovereign approach to cybersecurity gave us complete confidence in our data protection.",
+      content: "Fredrick architected a security infrastructure that transformed our entire digital operations. His practical approach to cybersecurity gave us confidence in our data protection.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
       metrics: [
         { value: "15+", label: "Critical zero-day vulnerabilities remediated" },
@@ -27,7 +27,7 @@ const Testimonials = () => {
       role: "Director, Digital Africa Initiative",
       company: "Digital Africa Initiative",
       companyInitials: "DA",
-      content: "Working with the Sovereign ICT Architect was a game-changer. His ability to design scalable cloud kingdoms while maintaining bulletproof security is unmatched in the industry.",
+      content: "Fredrick designed scalable cloud infrastructure while maintaining strong security throughout the project.",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
       metrics: [
         { value: "40%", label: "Reduction in deployment downtime" },
@@ -39,7 +39,7 @@ const Testimonials = () => {
       role: "CEO, Nairobi FinTech Hub",
       company: "Nairobi FinTech Hub",
       companyInitials: "NF",
-      content: "FRIMAT TECHNOLOGIES delivered a sovereign-grade solution that exceeded our expectations. Fredrick's precision in every protocol and excellence in execution speaks volumes about his craft.",
+      content: "FRIMAT TECHNOLOGIES delivered a reliable solution that exceeded our expectations. Fredrick brought care, precision, and clear execution to the work.",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
       metrics: [
         { value: "99.98%", label: "Platform availability sustained" },
@@ -80,11 +80,11 @@ const Testimonials = () => {
         >
           <span className="text-secondary font-mono text-sm tracking-[0.3em] uppercase">Testimonials</span>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground mt-2">
-            Council of Clients
+            Client Feedback
           </h2>
           <div className="w-20 h-0.5 bg-secondary mx-auto mb-6"></div>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-sans">
-            What leaders say about partnering with the Sovereign ICT Architect
+            Feedback and reported results from technology projects
           </p>
         </motion.div>
 
@@ -101,7 +101,7 @@ const Testimonials = () => {
                 {/* Decorative corner */}
                 <div className="absolute top-0 right-0 w-16 h-16 bg-secondary/10"></div>
                 <div className="absolute top-2 right-2">
-                  <Crown className="w-4 h-4 text-secondary" />
+                  <Building2 className="w-4 h-4 text-secondary" />
                 </div>
                 
                 <CardContent className="pt-8">

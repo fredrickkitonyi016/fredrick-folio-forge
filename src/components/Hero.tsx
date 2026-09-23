@@ -1,6 +1,6 @@
 import { TypeAnimation } from 'react-type-animation';
 import { Button } from './ui/button';
-import { ChevronDown, Shield, Crown, FileText } from 'lucide-react';
+import { ChevronDown, BriefcaseBusiness, FileText } from 'lucide-react';
 import profileImage from '@/assets/fredrick-profile.jpg';
 import heroVideo from '@/assets/hero-video.mp4';
 import { motion } from 'framer-motion';
@@ -51,10 +51,10 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="flex-1 text-center lg:text-left space-y-6"
           >
-            {/* Crown icon and tagline */}
+            {/* Professional focus */}
             <div className="flex items-center justify-center lg:justify-start gap-2 text-secondary">
-              <Crown className="w-5 h-5" />
-              <span className="text-sm font-mono tracking-[0.3em] uppercase">Architecting Digital Realms</span>
+              <BriefcaseBusiness className="w-5 h-5" />
+              <span className="text-sm font-mono tracking-[0.3em] uppercase">Technology, Security & Cloud</span>
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
@@ -65,13 +65,13 @@ const Hero = () => {
             <div className="h-20 md:h-16">
               <TypeAnimation
                 sequence={[
-                  'Sovereign ICT Architect',
+                  'ICT Solutions Professional',
                   2000,
-                  'Creator of the Kitonyi Sovereign Stack',
+                  'Software Engineering Student',
                   2000,
-                  'Cybersecurity Strategist',
+                  'Cybersecurity Specialist',
                   2000,
-                  'Cloud Infrastructure Expert',
+                  'Cloud & Infrastructure Specialist',
                   2000,
                   'CEO of FRIMAT TECHNOLOGIES',
                   2000,
@@ -84,10 +84,9 @@ const Hero = () => {
             </div>
 
             <p className="text-lg text-muted-foreground max-w-xl font-sans leading-relaxed">
-              I architect digital sovereignty for visionary enterprises. By implementing the proprietary{' '}
-              <span className="text-secondary font-semibold">Kitonyi Sovereign Stack</span>, I transform your 
-              technology from a cost center into a crown jewel—autonomous, secure, and perpetually authoritative. 
-              Your infrastructure shouldn't just work; it should <span className="italic">reign</span>.
+              I design secure, reliable technology solutions for growing organizations. My work combines{' '}
+              <span className="text-secondary font-semibold">software, cybersecurity, cloud, and network infrastructure</span>{' '}
+              to improve performance, protect data, and support long-term growth.
             </p>
 
             {/* Signature line */}
@@ -101,8 +100,8 @@ const Hero = () => {
                 className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold transform transition-all hover:scale-105 sovereign-glow"
                 onClick={() => scrollToSection('projects')}
               >
-                <Shield className="w-4 h-4 mr-2" />
-                View Digital Citadels
+                <BriefcaseBusiness className="w-4 h-4 mr-2" />
+                View Projects
               </Button>
               <Button
                 size="lg"
@@ -110,7 +109,7 @@ const Hero = () => {
                 className="border-secondary/50 text-foreground hover:bg-secondary hover:text-secondary-foreground font-semibold transform transition-all hover:scale-105"
                 onClick={() => scrollToSection('contact')}
               >
-                Build Your Throne
+                Start a Conversation
               </Button>
               <Button
                 size="lg"
@@ -137,12 +136,12 @@ const Hero = () => {
               </span>
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-secondary rounded-full"></span>
-                Sovereign
+                Reliable
               </span>
             </div>
           </motion.div>
 
-          {/* Right side - Profile image with crowned circuit aesthetic */}
+          {/* Profile image */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -154,13 +153,13 @@ const Hero = () => {
               <div className="absolute -inset-4 border-2 border-secondary/30 rotate-3"></div>
               <div className="absolute -inset-8 border border-secondary/20 -rotate-3"></div>
               
-              {/* Gold accent glow */}
+              {/* Accent glow */}
               <div className="absolute inset-0 bg-secondary/10 blur-3xl animate-pulse"></div>
               
               {/* Profile image */}
               <img
                 src={profileImage}
-                alt="Fredrick Kitonyi - Sovereign ICT Architect"
+                alt="Fredrick Kitonyi - ICT solutions professional"
                 className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover border-2 border-secondary shadow-2xl transform hover:scale-105 transition-transform duration-500"
               />
               
